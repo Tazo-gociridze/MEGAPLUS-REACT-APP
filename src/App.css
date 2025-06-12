@@ -1,0 +1,23 @@
+
+
+.navLink{
+    div{
+        width: 0%;
+        height: 3px;
+        background-color: red;
+        transition: 0.3s;
+    }
+   
+    &:hover{
+        div{
+            width: 100%;
+        }
+    }
+}
+
+    .active{
+        div{
+            width: 100% !important;
+        }
+        
+    }
