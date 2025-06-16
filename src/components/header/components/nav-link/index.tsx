@@ -10,7 +10,7 @@ const NavLink: FC<NavLinkProps> = ({ name, path }) => {
   const currentPath = useLocation().pathname;
   return (
     <Link className={currentPath === path ? 'navLink active text-red-600' : 'navLink'} to={path}>
-      {name}
+      <span>{name}</span> 
       <div></div>
     </Link>
   );

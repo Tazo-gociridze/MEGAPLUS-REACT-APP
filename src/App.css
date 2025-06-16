@@ -3,9 +3,10 @@
 .navLink{
     div{
         width: 0%;
-        height: 3px;
+        height: 2px;
         background-color: red;
         transition: 0.3s;
+        transform: translateY(17px);
     }
    
     &:hover{
@@ -20,4 +21,9 @@
             width: 100% !important;
         }
         
+    }
+
+
+    .contact-fixed-icon{
+        animation-name: scalable;
     }
