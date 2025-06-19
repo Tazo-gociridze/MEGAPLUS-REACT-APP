@@ -16,7 +16,7 @@ body{
   transition: 0.3s;
   padding-top: 64px;
   height: 300vh;
-  background-image: url(/public/main-bg.png);
+  background-image: url(/public/img/main-bg.png);
   background-repeat: repeat;
   background-size: 4px 4px;
 }
@@ -34,7 +34,7 @@ body{
   transition: 0.3s;
    padding-top: 64px;
   height: 300vh;
-  background-image: url(/public/dark-bg.jpg);
+  background-image: url(/public/img/dark-bg.jpg);
   background-repeat: repeat;
   background-size: 4px 4px;
 }

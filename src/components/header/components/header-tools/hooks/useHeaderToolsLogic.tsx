@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import kaflag from '../../../images/flag-icons/ka.png';
 import usaflag from '../../../images/flag-icons/usa.png';
 import ruflag from '../../../images/flag-icons/ru.png';
+import azflag from '../../../images/flag-icons/az.png';
+import uzflag from '../../../images/flag-icons/uz.png';
 import type { MenuProps } from 'antd';
 import ChangeLangItem from '../../change-lang-item';
 
@@ -12,6 +14,8 @@ const languageOptions = {
   En: usaflag,
   'ქა': kaflag,
   Ру: ruflag,
+  Az: azflag,
+  Uz: uzflag,
 };
 
 const useHeaderToolsLogic = () => {
