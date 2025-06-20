@@ -27,6 +27,7 @@ const useHeaderToolsLogic = () => {
   const { i18n } = useTranslation()
   useEffect(() => {
    i18n.changeLanguage(lang)
+   //eslint-disable-next-line
   }, [lang])
 
   useEffect(() => {
