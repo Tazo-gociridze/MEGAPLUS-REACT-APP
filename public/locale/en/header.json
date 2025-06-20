@@ -1,3 +1,6 @@
 {
-    "home-link": "home"
+    "home-link": "Home",
+    "blog-link": "Blogs",
+    "contact-link": "Contact",
+    "doc-link": "Documentation"
 }

@@ -9,16 +9,17 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    load: 'languageOnly',
-    debug: true, 
-    ns: ['header'],
-    defaultNS: 'header',
+    debug: false,
     interpolation: {
       escapeValue: false,
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/locale/{{lng}}/{{ns}}.json',
     },
+    ns: [
+      'header',
+    ],
+    defaultNS: 'header',
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],

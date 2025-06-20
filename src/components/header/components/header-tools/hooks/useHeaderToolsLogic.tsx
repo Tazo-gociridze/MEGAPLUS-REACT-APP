@@ -6,14 +6,15 @@ import azflag from '../../../images/flag-icons/az.png';
 import uzflag from '../../../images/flag-icons/uz.png';
 import type { MenuProps } from 'antd';
 import ChangeLangItem from '../../change-lang-item';
+import { useTranslation } from 'react-i18next';
 
 const LANGUAGE_STORAGE_KEY = 'selectedLanguage';
 const THEME_STORAGE_KEY = 'darkTheme';
 
 const languageOptions = {
   En: usaflag,
-  'ქა': kaflag,
-  Ру: ruflag,
+  Ka: kaflag,
+  Ru: ruflag,
   Az: azflag,
   Uz: uzflag,
 };
@@ -22,6 +23,11 @@ const useHeaderToolsLogic = () => {
   const [dark, setDarkState] = useState(false);
   const [lang, setLang] = useState('En');
   const [flag, setFlag] = useState(usaflag);
+
+  const { i18n } = useTranslation()
+  useEffect(() => {
+   i18n.changeLanguage(lang)
+  }, [lang])
 
   useEffect(() => {
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);

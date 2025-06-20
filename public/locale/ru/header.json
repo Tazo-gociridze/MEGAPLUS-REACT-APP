@@ -1,3 +1,6 @@
 {
-    "home-link": "home"
+  "home-link": "Главная",
+  "blog-link": "Блоги",
+  "contact-link": "Контакты",
+  "doc-link": "Документации"
 }
