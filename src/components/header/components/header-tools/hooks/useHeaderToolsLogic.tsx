@@ -12,16 +12,16 @@ const LANGUAGE_STORAGE_KEY = 'selectedLanguage';
 const THEME_STORAGE_KEY = 'darkTheme';
 
 const languageOptions = {
-  En: usaflag,
-  Ka: kaflag,
-  Ru: ruflag,
-  Az: azflag,
-  Uz: uzflag,
+  en: usaflag,
+  ka: kaflag,
+  ru: ruflag,
+  az: azflag,
+  uz: uzflag,
 };
 
 const useHeaderToolsLogic = () => {
   const [dark, setDarkState] = useState(false);
-  const [lang, setLang] = useState('En');
+  const [lang, setLang] = useState('en');
   const [flag, setFlag] = useState(usaflag);
 
   const { i18n } = useTranslation()

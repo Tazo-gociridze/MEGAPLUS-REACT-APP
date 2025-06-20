@@ -16,7 +16,7 @@ const HeaderTools = () => {
             onClick={(e) => e.preventDefault()}
             className="flex items-center gap-x-1 text-center text-lg font-[350]"
           >
-            <Space>{lang}</Space>
+            <Space className='capitalize'>{lang}</Space>
             <img src={flag} alt="" className="!mt-[2px] h-4 w-4" />
           </a>
         </Dropdown>
