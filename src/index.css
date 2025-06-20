@@ -4,6 +4,10 @@
 
 :root{
     --main-color: #CD1E1E;
+    --dark-blue: #25233f;
+    --gray: #2D3744;
+    --dark-gray: #1C222B;
+    --white-gray: #D9DADC;
 }
 
 *{
@@ -15,19 +19,38 @@
 body{
   transition: 0.3s;
   padding-top: 64px;
-  height: 300vh;
+  margin: 0;
   background-image: url(/public/img/main-bg.png);
   background-repeat: repeat;
   background-size: 4px 4px;
 }
 
-.ant-dropdown {
+/* .ant-dropdown {
   background-color: white;
 }
 
 .dark .ant-dropdown {
   background-color: #1f1f1f;
   color: white;
+} */
+
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 1600px !important;
 }
 
 .dark body {

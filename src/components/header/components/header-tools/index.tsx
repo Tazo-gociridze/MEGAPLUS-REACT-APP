@@ -6,7 +6,7 @@ import useHeaderToolsLogic from './hooks/useHeaderToolsLogic';
 const HeaderTools = () => {
   const { items, dark, setDark, lang, flag } = useHeaderToolsLogic();
   return (
-    <div className="flex items-center gap-x-10 text-xl *:cursor-pointer text-[#0B0642] dark:text-[white]">
+    <div className="flex items-center gap-x-10 !justify-between text-xl *:cursor-pointer text-[var(--dark-blue)] dark:text-[var(--white-gray)]">
       <span className="" onClick={() => setDark(!dark)}>
         {dark ? <SunOutlined /> : <IoMoonOutline />}
       </span>
