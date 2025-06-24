@@ -10,10 +10,10 @@ const NavBar = () => {
   return (
         <div className="flex w-screen items-center gap-x-26">
           <Link to={'/'}>
-            <img className="h-[40px] w-[100px] cursor-pointer" src={logo} alt="" />
+            <img className="h-[2.35rem] w-[6.1rem] cursor-pointer" src={logo} alt="" />
           </Link>
-          <nav className="ibm-plex-serif-extralight !font-[350] noto-sans-georgian flex items-center 
-                justify-center gap-x-10 text-[17px] text-[#0B0642] dark:text-[var(--white-gray)]">
+          <nav className="ibm-plex-serif-extralight header-navbar !font-[350] noto-sans-georgian flex items-center 
+                justify-center gap-x-10 text-[1rem] text-[#0B0642] dark:text-[var(--white-gray)]">
             <NavLink name={t('home-link')} path="/" />
             <NavLink name={t('blog-link')} path="/about" />
             <NavLink name={t('contact-link')} path="/contacts" />

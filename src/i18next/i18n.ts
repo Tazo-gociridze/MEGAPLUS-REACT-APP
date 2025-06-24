@@ -18,6 +18,7 @@ i18n
     },
     ns: [
       'header',
+      'home',
     ],
     defaultNS: 'header',
     detection: {

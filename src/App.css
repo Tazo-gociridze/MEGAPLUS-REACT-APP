@@ -1,3 +1,10 @@
+html {
+  font-size: 16px;
+}
+
+.fixed-width {
+  padding: 0 13rem !important;
+}
 
 .navLink {
   position: relative;
@@ -12,7 +19,7 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-  translate: 0 17px;
+  translate: 0 1.19rem;
 }
 
 .navLink:hover div,
@@ -26,4 +33,94 @@
   transform-origin: right;
 }
 
+.hero-image {
+  width: 50rem;
+  height: 100%;
+  background-image: url(./images/home/hero-image.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
 
+.hero-image.visible {
+  opacity: 1;
+}
+
+.hero-decoration-div {
+  width: 0;
+  height: 300px;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  z-index: 0;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-right: 5px solid rgba(255, 0, 0, 0.432);
+  transition: width 0.8s ease;
+}
+
+.sidebar-activator{
+  display: none;
+}
+
+.header-navbar{
+
+}
+
+@media (max-width: 1540px) {
+  html {
+    font-size: 14px;
+  }
+
+  .fixed-width {
+    padding: 0 8rem !important;
+  }
+}
+
+@media (max-width: 1215px) {
+  html {
+    font-size: 12px;
+  }
+
+  .fixed-width {
+    padding: 0 8rem !important;
+  }
+}
+
+@media (max-width: 1040px) {
+  html {
+    font-size: 11px;
+  }
+
+  .fixed-width {
+    padding: 0 4rem !important;
+  }
+}
+
+ @media (max-width: 860px) {
+  html{
+    font-size: 15px;
+  }
+  .fixed-width {
+    padding: 0 2rem !important;
+  }
+
+  .sidebar-activator{
+    display: block;
+  }
+
+  .top-header{
+    display: none;
+  }
+  .header-navbar{
+    display: none; 
+}
+}
+
+ @media (max-width: 500px) {
+  html{
+    font-size: 12px;
+  }
+}
