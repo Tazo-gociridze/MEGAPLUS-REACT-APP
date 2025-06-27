@@ -69,6 +69,19 @@ html {
 
 }
 
+
+.about-image{
+  background-image: url(./images/about/aboutUs.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about-image-2{
+  background-image: url(./images/about/aboutUs-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 @media (max-width: 1540px) {
   html {
     font-size: 14px;

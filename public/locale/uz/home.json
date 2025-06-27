@@ -1,5 +1,12 @@
 {
-    "hero-text-1": "iznesni boshqarish va moliyaviy hisobot dasturi",
-    "hero-text-2": "Biznesingizni boshqarish uchun kerak bo‘lgan hamma narsa",
-    "hero-text-3": "Audit, buxgalteriya va menejmentning to‘liq avtomatlashtirilishi"
+  "hero-text-1": "iznesni boshqarish va moliyaviy hisobot dasturi",
+  "hero-text-2": "Biznesingizni boshqarish uchun kerak bo‘lgan hamma narsa",
+  "hero-text-3": "Audit, buxgalteriya va menejmentning to‘liq avtomatlashtirilishi",
+
+  
+  "about-tag": "biz haqimizda",
+  "about-title": "Kompaniyamiz haqida",
+  "about-text": "MEGA + — bu mahsulot 12 yillik tajribamiz asosida yaratilgan bo‘lib, savdo muhitida yuzaga kelgan ko‘plab muammolar va voqealarga asoslangan. Ularning yechimlari xodimlar va savdo sub'yektini boshqarish ishlarini sezilarli darajada soddalashtirdi.",
+  "about-get-btn": "Boshlash",
+  "about-view-btn": "Batafsil"
 }

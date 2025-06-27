@@ -1,59 +1,31 @@
-import { RiContactsBook3Line } from 'react-icons/ri';
-import { useState } from 'react';
-import { CiLocationOn, CiMail, CiPhone } from 'react-icons/ci';
+import type { FC } from 'react';
+import { IoIosClose } from 'react-icons/io';
 
-const Sidebar = () => {
-  const [sidebar, setSidebar] = useState<boolean>(false);
+interface SidebarProps {
+  sidebar: boolean;
+  setSidebar: (value: boolean) => void;
+}
 
-  document.addEventListener('click', () => {
-    setSidebar(false);
-  });
-
-  function activateSidebar(e: React.MouseEvent<SVGElement>) {
-    e.stopPropagation();
-    setSidebar(!sidebar);
-  }
-
-  function propagationStop(e: React.MouseEvent<HTMLDivElement>) {
-    e.stopPropagation();
-  }
+const Sidebar: FC<SidebarProps> = ({ setSidebar, sidebar }) => {
   return (
-    <div
-      className={
-        sidebar
-          ? `fixed top-40 right-0 flex translate-x-[0px] transform items-start text-5xl text-red-500 transition-[0.3s]`
-          : `fixed top-40 right-0 flex translate-x-[295px] transform items-start text-5xl text-red-500 transition-[0.3s]`
-      }
-    >
-      <RiContactsBook3Line
-        onClick={activateSidebar}
-        className="contact-fixed-icon cursor-pointer"
-      />
+    <>
       <div
-        onClick={propagationStop}
-        className="h-[500px] w-[300px] border-l-5 border-solid border-red-400 bg-red-100 !py-2"
+        onClick={() => setSidebar(false)}
+        className={`fixed top-0 left-0 z-[9999] h-full w-full bg-[#00000067] ${
+          sidebar ? 'visible opacity-[1]' : 'invisible opacity-[0]'
+        } cursor-pointer transition-[1s]`}
+      ></div>
+      <div
+        className={`fixed top-0 right-[-400px] h-full w-[400px] bg-red-50 transition-[0.3s] ${
+          sidebar ? 'right-[0px]' : 'right-[-400px]'
+        } z-[9999]`}
       >
-        <span className="!mb-10 flex items-center justify-center gap-x-3">
-          <span className="h-[1px] w-[30px] bg-red-500"></span>
-          <span className="text-xl">Contacts</span>
-          <span className="h-[1px] w-[30px] bg-red-500"></span>
-        </span>
-        <div className="flex flex-col gap-y-15">
-          <div className="flex w-[100%] items-center gap-x-5 border-l-9 border-solid border-red-400 !p-2">
-            <CiPhone className="text-4xl" />
-            <span className="text-lg">(+995) 567-678-789</span>
-          </div>
-          <div className="flex w-[100%] items-center gap-x-5 border-l-9 border-solid border-red-400 !p-2">
-            <CiMail className="text-4xl" />
-            <span className="text-lg font-bold">(+995) 567-678-789</span>
-          </div>
-          <div className="flex w-[100%] items-center gap-x-5 border-l-9 border-solid border-red-400 !p-2">
-            <CiLocationOn className="text-4xl" />
-            <span className="text-lg">(+995) 567-678-789</span>
-          </div>
-        </div>
+        <IoIosClose
+          onClick={() => setSidebar(false)}
+          className={`absolute top-[10px] left-[10px] cursor-pointer text-5xl text-red-600 ${sidebar ? 'block' : 'hidden'}`}
+        />
       </div>
-    </div>
+    </>
   );
 };
 

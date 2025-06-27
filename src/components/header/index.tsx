@@ -3,9 +3,13 @@ import NavBar from './components/nav-bar';
 import HeaderTools from './components/header-tools';
 import TopHeader from './components/top-header';
 
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 860);
+interface HeaderProps {
+  setSidebar: (value: boolean) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ setSidebar }) => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isWideScreen, setIsWideScreen] = useState<boolean>(window.innerWidth > 860);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,7 @@ const Header = () => {
         setIsScrolled(false);
       } else {
         handleScroll();
+        setSidebar(false);
       }
     };
 
@@ -36,7 +41,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
-  }, [isWideScreen]);
+  }, [isWideScreen, setSidebar]);
 
   return (
     <header
@@ -48,7 +53,7 @@ const Header = () => {
 
       <div className="fixed-width horizontal-padding flex w-full items-center bg-red-50 !justify-between !py-3 dark:bg-[var(--dark-blue)]">
         <NavBar />
-        <HeaderTools />
+        <HeaderTools setSidebar={setSidebar} />
       </div>
     </header>
   );

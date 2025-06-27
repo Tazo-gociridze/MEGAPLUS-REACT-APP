@@ -53,6 +53,7 @@ const Hero = () => {
       ></div>
 
       <div ref={decorationRef} className="hero-decoration-div bg-red-50"></div>
+      <div className="hero-demo-app-pc"></div>
     </div>
   );
 };

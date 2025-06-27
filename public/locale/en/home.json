@@ -1,5 +1,12 @@
 {
     "hero-text-1": "Business management and financial accounting software",
     "hero-text-2": "Everything you need to manage your business",
-    "hero-text-3": "Full automation of audit, accounting, and management"
+    "hero-text-3": "Full automation of audit, accounting, and management",
+
+
+    "about-tag": "about us",
+    "about-title": "About our company",
+    "about-text": "MEGA + is a product created based on the motivations defined by our 12 years of experience, which is rooted in many incidents and problems that have occurred in trading environments, the solutions of which have significantly simplified the work of personnel and the management of the trading entity.",
+    "about-get-btn": "Get started",
+    "about-view-btn": "View more"
 }

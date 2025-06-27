@@ -15,7 +15,7 @@ const NavBar = () => {
           <nav className="ibm-plex-serif-extralight header-navbar !font-[350] noto-sans-georgian flex items-center 
                 justify-center gap-x-10 text-[1rem] text-[#0B0642] dark:text-[var(--white-gray)]">
             <NavLink name={t('home-link')} path="/" />
-            <NavLink name={t('blog-link')} path="/about" />
+            <NavLink name={t('blog-link')} path="/blog" />
             <NavLink name={t('contact-link')} path="/contacts" />
             <NavLink name={t('doc-link')} path="/docs" />
           </nav>
