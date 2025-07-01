@@ -3,10 +3,14 @@
   "hero-text-2": "Biznesinizi idarə etmək üçün lazım olan hər şey",
   "hero-text-3": "Audit, mühasibatlıq və menecmentin tam avtomatlaşdırılması",
 
-  
   "about-tag": "haqqımızda",
   "about-title": "Şirkətimiz haqqında",
   "about-text": "MEGA + — bu məhsul 12 illik təcrübəmizə əsaslanaraq yaradılmışdır. Bu təcrübə ticarət mühitində baş vermiş çoxsaylı hadisə və problemlərə əsaslanır və onların həlli personalın işini və ticarət obyektinin idarə olunmasını xeyli sadələşdirmişdir.",
   "about-get-btn": "Başla",
-  "about-view-btn": "Ətraflı bax"
+  "about-view-btn": "Ətraflı bax",
+
+  "capabilities-title": "İmkanlar",
+  "capabilities-text": "MEGA+ ticarət obyektinin və ya obyektlərinin idarə olunması və uçotunun aparılması üçün nəzərdə tutulmuşdur. Bu, obyektin operativ rejimdə idarə olunmasına və sonrakı uçotuna imkan verən çox çevik bir sistemdir. Proqram aşağıdakı əməliyyatların həyata keçirilməsi üçün nəzərdə tutulmuşdur:",
+
+   "visual-section-title": "xoş dizayn" 
 }

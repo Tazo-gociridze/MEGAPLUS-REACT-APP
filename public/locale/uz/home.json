@@ -3,10 +3,14 @@
   "hero-text-2": "Biznesingizni boshqarish uchun kerak bo‘lgan hamma narsa",
   "hero-text-3": "Audit, buxgalteriya va menejmentning to‘liq avtomatlashtirilishi",
 
-  
   "about-tag": "biz haqimizda",
   "about-title": "Kompaniyamiz haqida",
   "about-text": "MEGA + — bu mahsulot 12 yillik tajribamiz asosida yaratilgan bo‘lib, savdo muhitida yuzaga kelgan ko‘plab muammolar va voqealarga asoslangan. Ularning yechimlari xodimlar va savdo sub'yektini boshqarish ishlarini sezilarli darajada soddalashtirdi.",
   "about-get-btn": "Boshlash",
-  "about-view-btn": "Batafsil"
+  "about-view-btn": "Batafsil",
+
+  "capabilities-title": "Imkoniyatlar",
+  "capabilities-text": "MEGA+ savdo obyektini yoki obyektlarini boshqarish va hisobga olish uchun mo‘ljallangan. Bu tizim juda moslashuvchan bo‘lib, obyektni real vaqt rejimida boshqarish va keyinchalik hisobga olish imkonini beradi. Dastur quyidagi operatsiyalarni amalga oshirish uchun mo‘ljallangan:",
+
+   "visual-section-title": "yoqimli dizayn" 
 }

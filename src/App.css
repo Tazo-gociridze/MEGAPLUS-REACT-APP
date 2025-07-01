@@ -19,7 +19,7 @@ html {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-  translate: 0 1.19rem;
+  translate: 0 1.05rem;
 }
 
 .navLink:hover div,

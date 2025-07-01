@@ -11,12 +11,12 @@ const TopHeader = () => {
       <div className="flex items-center gap-x-4 bg-red-50 rounded-2xl">
         <IoPhonePortraitOutline className="text-3xl text-red-500 dark:text-red-300" />
         <a href="tel:995597050364" className="dark:text-[var(--white-gray)]">
-          +995 557-567-789
+          +995 592 00 32 32
         </a>
       </div>
       <div className="flex items-center gap-x-4 bg-red-50 rounded-2xl">
         <CiMail className="text-3xl text-red-500 dark:text-red-300" />
-        <span className="dark:text-[var(--white-gray)]">megaplus@gmail.com</span>
+        <span className="dark:text-[var(--white-gray)]">INFO@MEGAPLUS.GE</span>
       </div>
       <div className="flex items-center gap-x-4 bg-red-50 rounded-2xl">
         <CiLocationOn className="text-3xl text-red-500 dark:text-red-300" />

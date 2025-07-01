@@ -19,6 +19,7 @@ import {
 } from 'swiper/modules';
 
 import type { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const contentStyle: CSSProperties = {
   width: '100%',
@@ -35,9 +36,12 @@ const images = [
 ];
 
 const VisualOfProgram = () => {
+
+  const {t} = useTranslation('home')
+
   return (
     <div className="w-full px-4 py-8 !mt-10">
-      <H2Title title="აღთქმადი ვიზუალი" />
+      <H2Title title={t("visual-section-title")} />
 
       <Swiper
         modules={[

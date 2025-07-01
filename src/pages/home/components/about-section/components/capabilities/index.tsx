@@ -15,7 +15,7 @@ const Capabilities = () => {
           <Tag text={t('about-tag')} />
           <CiBoxList className="text-4xl text-red-400" />
         </span>
-        <H2Title title='შესაძლებლობები'/>
+        <H2Title title={t("capabilities-title")}/>
         <Text />
         <div className="!mt-10">
           <ListItem text="lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color " />
