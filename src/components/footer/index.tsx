@@ -6,8 +6,8 @@ import { RiContactsBook3Line } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="fixed-width w-full bg-black !py-10 text-white">
-      <div className="grid grid-cols-2 gap-x-20">
+    <footer className="fixed-width w-full bg-black !pt-10 text-white">
+      <div className="grid grid-cols-2 gap-x-20 !mb-10">
         <div className="flex justify-between">
           <div className="flex flex-col items-start">
             <span className="!mb-4 flex items-center gap-x-3 text-2xl">
@@ -29,7 +29,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-x-3">
                 <CiLocationOn className="text-lg text-red-300" />
-                <span>თბილისი, წერეთლის გამზირი №16</span>
+                <span>თბილისი, წერეთლის გამზირი №116</span>
               </li>
             </ul>
           </div>
@@ -74,6 +74,9 @@ const Footer = () => {
             className="border-0"
           ></iframe>
         </div>
+      </div>
+      <div className="text-center border-t-[1px] border-[#ffffff2f] !py-2">
+        <span>© 2025 Copyright: MEGA PLUS</span>
       </div>
     </footer>
   );

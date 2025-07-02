@@ -1,34 +1,28 @@
-import { useState } from 'react';
 import { Card, Collapse, Row, Col, Modal } from 'antd';
 import H2Title from '../../../../utils/h2title';
 import { IoIosArrowDown } from 'react-icons/io';
-import { tariffs } from './tariffs-data';
+import useTariffsLogic from './useTariffsLogic';
 
 const { Panel } = Collapse;
 
 const Tariffs = () => {
-  const [activePanels, setActivePanels] = useState<string[][]>(
-    tariffs.map((tariff) => tariff.features.map((_, i) => i.toString()))
-  );
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleAllPanels = (index: number) => {
-    const isOpen = activePanels[index].length === tariffs[index].features.length;
-
-    const newActivePanels = [...activePanels];
-    newActivePanels[index] = isOpen ? [] : tariffs[index].features.map((_, i) => i.toString());
-    setActivePanels(newActivePanels);
-  };
-
-  const showModal = () => setIsModalOpen(true);
-  const handleCancel = () => setIsModalOpen(false);
+  const {
+    tariffs,
+    isModalOpen,
+    activePanels,
+    setActivePanels,
+    toggleAllPanels,
+    showModal,
+    handleCancel,
+    t,
+  } = useTariffsLogic()
 
   return (
     <div className="!mt-[100px]">
-      <H2Title id="tariffs" title="ტარიფები" className="!mb-[40px]" />
+      <H2Title id="tariffs" title={t("title")} className="!mb-[40px]" />
       <p className="!mb-[40px] text-xl text-green-900">
-        ფასი არის ყოველთვიური და მოიცავს მომსახურებასაც. თანხები მოცემულია დღგ-ს ჩათვლით!
+        {t("tariffs-text")}
       </p>
       <Row gutter={[24, 24]}>
         {tariffs.map((tariff, index) => (
@@ -41,7 +35,7 @@ const Tariffs = () => {
               <div className="!mb-6 flex items-center justify-between">
                 <span className="text-2xl">{tariff.name}</span>
                 <button className="fancy-order-button" onClick={showModal}>
-                  შეკვეთა
+                  {t("tariffs-btn")}
                 </button>
               </div>
               <div className="!mb-6 h-[1px] w-full bg-[#0000002a]"></div>
@@ -61,7 +55,7 @@ const Tariffs = () => {
                 </div>
               </div>
 
-              <div className="!mb-6 text-center text-sm text-gray-500">დამატებითი ლიცენზია 50ლ</div>
+              <div className="!mb-6 text-center text-sm text-gray-500">{t("additional-license-text")}</div>
 
               <Collapse
                 ghost
@@ -108,13 +102,13 @@ const Tariffs = () => {
         <div className="space-y-4 text-lg !p-5 text-gray-800 ">
           <span className='!mb'>დაგვიკავშირდით</span>
           <div className='!mb-4 !mt-6 flex items-center gap-x-4'>
-            📞 <strong>ტელ:</strong>
+            📞 
             <a href="tel:+995599123456" className="!text-red-600 hover:!underline ">
               +995 592 00 32 32
             </a>
           </div>
-          <div>
-            📧  <strong>ელ.ფოსტა:</strong>{' '}
+          <div className='flex items-center gap-x-4'>
+            📧 {' '}
             <a href="mailto:INFO@MEGAPLUS.GE" className="!text-red-600 hover:!underline">
               INFO@MEGAPLUS.GE
             </a>

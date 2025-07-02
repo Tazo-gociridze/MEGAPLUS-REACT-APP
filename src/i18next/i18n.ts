@@ -20,6 +20,7 @@ i18n
     ns: [
       'header',
       'home',
+      'tariffs'
     ],
     defaultNS: 'header',
     detection: {
