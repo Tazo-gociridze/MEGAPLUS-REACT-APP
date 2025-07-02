@@ -115,7 +115,7 @@ const Tariffs = () => {
           </div>
           <div>
             📧  <strong>ელ.ფოსტა:</strong>{' '}
-            <a href="mailto:support@example.com" className="!text-red-600 hover:!underline">
+            <a href="mailto:INFO@MEGAPLUS.GE" className="!text-red-600 hover:!underline">
               INFO@MEGAPLUS.GE
             </a>
           </div>
