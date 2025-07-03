@@ -10,7 +10,8 @@
 
 :root{
     --main-color: #CD1E1E;
-    --dark-blue: #25233f;
+    --dark-blue: #151A2D;
+    --dark-light-blue: #212639;
     --gray: #2D3744;
     --dark-gray: #1C222B;
     --white-gray: #D9DADC;
@@ -57,8 +58,6 @@ body{
 }
 
 footer {
-  background: #333;
-  color: white;
   padding: 20px;
   text-align: center;
   margin-top: 100px !important;

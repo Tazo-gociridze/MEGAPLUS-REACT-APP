@@ -8,8 +8,58 @@
   "tariff-mini": "მინი",
   "additional-license-text": "დამატებითი ლიცენზია 50₾",
 
-  
-  "nomenclature-quantity-key": "ნომენკლატურის რაოდენობა",
-  "nomenclature-quantity-value": "შეუზღუდავი"
+  "tariffs-modal-title": "დაგვიკავშირდით",
 
+  "nomenclature-quantity-key": "ნომენკლატურის რაოდენობა",
+  "nomenclature-quantity-value": "შეუზღუდავი",
+
+  "main-modules": "ძირითადი მოდულები",
+  "cash-register-standard": "სტანდარტული სალაროს მოდული",
+  "cash-register-food": "კვების ობიექტის სალაროს მოდული",
+  "purchase-rs": "შესყიდვები RS-ს მეშვეობით",
+  "return-rs": "დაბრუნება RS-ს მეშვეობით",
+  "product-writeoff": "პროდუქციის ჩამოწერა",
+  "cash-management": "სალაროს მართვა",
+  "stock-management": "ნაშთების მართვა",
+  "warehouse-management": "საწყობების მართვა",
+  "category-management": "კატეგორიების მართვა",
+  "debt-management": "დავალიანებების მართვა",
+  "contract-management": "ხელშეკრულებების მართვა",
+  "warehouse-transfer": "გადაადგილება საწყობებს შორის",
+  "staff-data-management": "პერსონალის მონაცემების მართვა",
+  "staff-function-management": "პერსონალის ფუნქციონალის მართვა",
+
+  "inventory": "ინვენტარიზაცია",
+  "inventory-by-group": "ინვენტარიზაცია ჯგუფით",
+  "inventory-by-supplier": "ინვენტარიზაცია მომწოდებლით",
+  "inventory-by-list": "ინვენტარიზაცია შედგენილი სიით",
+  "inventory-android-module": "ინვენტარიზაციის Android მოდული",
+
+  "additional-modules": "დამხმარე მოდულები",
+  "cash-book": "სალაროს წიგნი",
+  "promo-management": "აქციების მართვა",
+  "auto-backup": "ავტომატური ბექაფი",
+  "accumulation-module": "დაგროვების მოდული",
+  "loyalty-module": "ლოიალობის მოდული",
+  "autonomous-cash-register": "ავტონომიური სალარო",
+  "auto-orders": "ავტომატური შეკვეთები",
+  "calculation-production": "კალკულაცია და წარმოება",
+  "product-conversion": "პროდუქციის კონვერტაცია",
+  "hourly-discounts": "საათობრივი ფასდაკლებები",
+
+  "reports": "რეპორტები",
+  "purchase-reports": "შესყიდვების რეპორტები",
+  "sales-reports": "რეალიზაციის რეპორტები",
+  "goods-movement-report": "საქონლის მოძრაობის რეპორტი",
+  "invoiced-sales": "რეალიზაციები ზედნადებით",
+
+  "integration": "ინტეგრაცია",
+  "bog-import-xlsx": "BOG იმპორტი (xlsx)",
+  "tbc-import-xlsx": "TBC იმპორტი (xlsx)",
+  "tbc-integration": "TBC იმპორტი (ინტეგრაცია)",
+  "cash-register-integration": "სალარო აპარატების ინტეგრაცია",
+  "bank-terminal-integration": "საბანკო ტერმინალის ინტეგრაცია",
+  "smart-scale-integration": "ჭკვიანი სასწორების ინტეგრაცია",
+  "barcode-scanner-integration": "შტრიხკოდის სკანერის ინტეგრაცია",
+  "list-printer-integration": "ჩამონათვალის პრინტერის ინტეგრაცია"
 }
