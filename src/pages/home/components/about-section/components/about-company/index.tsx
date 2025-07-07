@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
-import Tag from '../../../../../../utils/tag';
-import H2Title from '../../../../../../utils/h2title';
+import Tag from '@/utils/tag';
+import H2Title from '@/utils/h2title';
 
 const AboutCompany = () => {
   const { t } = useTranslation('home');

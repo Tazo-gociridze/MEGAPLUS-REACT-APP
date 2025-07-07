@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import NavLink from "../nav-link"
-import logo from '../../../../images/logo.png'
+import logo from '@/images/logo.png'
 import { useTranslation } from "react-i18next"
 
 

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import kaflag from '../../../images/flag-icons/ka.png';
-import usaflag from '../../../images/flag-icons/usa.png';
-import ruflag from '../../../images/flag-icons/ru.png';
-import azflag from '../../../images/flag-icons/az.png';
-import uzflag from '../../../images/flag-icons/uz.png';
+import kaflag from '@/components/header/images/flag-icons/ka.png';
+import usaflag from '@/components/header/images/flag-icons/usa.png';
+import ruflag from '@/components/header/images/flag-icons/ru.png';
+import azflag from '@/components/header/images/flag-icons/az.png';
+import uzflag from '@/components/header/images/flag-icons/uz.png';
 import type { MenuProps } from 'antd';
-import ChangeLangItem from '../../change-lang-item';
+
 import { useTranslation } from 'react-i18next';
+import ChangeLangItem from '../../change-lang-item';
 
 const LANGUAGE_STORAGE_KEY = 'selectedLanguage';
 const THEME_STORAGE_KEY = 'darkTheme';

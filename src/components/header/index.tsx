@@ -1,47 +1,13 @@
-import { useState, useEffect } from 'react';
+
 import NavBar from './components/nav-bar';
 import HeaderTools from './components/header-tools';
 import TopHeader from './components/top-header';
+import useHeaderLogic, { type HeaderProps } from './hooks/useHeaderLogic';
 
-interface HeaderProps {
-  setSidebar: (value: boolean) => void;
-}
 
 const Header: React.FC<HeaderProps> = ({ setSidebar }) => {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isWideScreen, setIsWideScreen] = useState<boolean>(window.innerWidth > 860);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0 && isWideScreen) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    const handleResize = () => {
-      const isWide = window.innerWidth > 860;
-      setIsWideScreen(isWide);
-
-      if (!isWide) {
-        setIsScrolled(false);
-      } else {
-        handleScroll();
-        setSidebar(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [isWideScreen, setSidebar]);
+  const {isScrolled} = useHeaderLogic(setSidebar)
 
   return (
     <header

@@ -1,63 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import TypewriterComponent from 'typewriter-effect';
+import Decoration from './components/decoration';
+import TypingText from './components/typing-text';
+import useHeroLogic from './hooks/useHeroLogic';
 
 const Hero = () => {
-  const decorationRef = useRef<HTMLDivElement>(null);
-  const [showImage, setShowImage] = useState(false);
-
-  const { t, i18n } = useTranslation('home');
-
-  useEffect(() => {
-    const el = decorationRef.current;
-    if (!el) return;
-
-    setTimeout(() => {
-      el.style.width = '55rem';
-      setTimeout(() => {
-        setShowImage(true);
-      }, 800);
-    }, 100);
-  }, []);
+  const { showImage, decorationRef } = useHeroLogic();
 
   return (
     <div className="relative !mt-28 h-[700px] w-full rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
-      <div className="flex items-center !p-8">
-        <h1 className="noto-sans-georgian text-[2.3rem] font-semibold dark:text-[var(--white-gray)]">
-          <TypewriterComponent
-            key={i18n.language} 
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(t('hero-text-1'))
-                .pauseFor(3000)
-                .deleteAll()
-                .typeString(t('hero-text-2'))
-                .pauseFor(3000)
-                .deleteAll()
-                .typeString(t('hero-text-3'))
-                .pauseFor(3000)
-                .deleteAll()
-                .start();
-            }}
-            options={{
-              loop: true,
-              delay: 20,
-              deleteSpeed: 1,
-            }}
-          />
-        </h1>
-      </div>
-
-      <div
-        className={`hero-image absolute top-0 right-0 ${showImage ? 'visible' : ''}`}
-      ></div>
-
-      <div ref={decorationRef} className="hero-decoration-div bg-red-50 dark:bg-[var(--dark-blue)]"></div>
-      <div className="hero-demo-app-pc"></div>
+      <TypingText />
+      <div className={`hero-image xl:!w-[45rem] xl:!h-[35rem] absolute xl:top-30 right-0 ${showImage ? 'visible' : ''}`}></div>
+      <Decoration decorationRef={decorationRef} />
     </div>
   );
 };
 
 export default Hero;
-
-

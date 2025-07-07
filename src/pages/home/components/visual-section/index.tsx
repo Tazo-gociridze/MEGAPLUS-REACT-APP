@@ -1,4 +1,4 @@
-import H2Title from '../../../../utils/h2title';
+import H2Title from '@/utils/h2title';
 import { Image } from 'antd';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -28,20 +28,19 @@ const contentStyle: CSSProperties = {
 };
 
 const images = [
-  "https://megaplus.vercel.app/assets/images/MTAVARI-PANELI-1.jpg",
-  "https://megaplus.vercel.app/assets/images/REALIZACIA-3.jpg",
-  "https://megaplus.vercel.app/assets/images/NOMENKLATURA-2.jpg",
-  "https://megaplus.vercel.app/assets/images/NAVACHRI-2.jpg",
-  "https://megaplus.vercel.app/assets/images/MIGEBA-2.jpg",
+  'https://megaplus.vercel.app/assets/images/MTAVARI-PANELI-1.jpg',
+  'https://megaplus.vercel.app/assets/images/REALIZACIA-3.jpg',
+  'https://megaplus.vercel.app/assets/images/NOMENKLATURA-2.jpg',
+  'https://megaplus.vercel.app/assets/images/NAVACHRI-2.jpg',
+  'https://megaplus.vercel.app/assets/images/MIGEBA-2.jpg',
 ];
 
 const VisualOfProgram = () => {
-
-  const {t} = useTranslation('home')
+  const { t } = useTranslation('home');
 
   return (
-    <div className="w-full px-4 py-8 !mt-10">
-      <H2Title title={t("visual-section-title")} />
+    <div className="!mt-10 w-full px-4 py-8">
+      <H2Title title={t('visual-section-title')} />
 
       <Swiper
         modules={[
@@ -77,11 +76,7 @@ const VisualOfProgram = () => {
         {images.map((src, index) => (
           <SwiperSlide key={index}>
             <div style={contentStyle}>
-              <Image
-                src={src}
-                height="100%"
-                loading="lazy"
-              />
+              <Image src={src} height="100%" loading="lazy" />
               <div className="swiper-lazy-preloader"></div>
             </div>
           </SwiperSlide>

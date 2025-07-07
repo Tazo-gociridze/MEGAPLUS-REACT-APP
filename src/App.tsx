@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import '@/pages/contacts/style.css'
 import MainLayout from './Layouts'
 import Home from './pages/home'
 import Contacts from './pages/contacts'
