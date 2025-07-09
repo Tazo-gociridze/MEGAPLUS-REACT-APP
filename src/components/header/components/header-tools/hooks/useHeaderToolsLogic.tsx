@@ -14,7 +14,7 @@ const THEME_STORAGE_KEY = 'darkTheme';
 
 const languageOptions = {
   en: usaflag,
-  ka: kaflag,
+  ge: kaflag,
   ru: ruflag,
   az: azflag,
   uz: uzflag,

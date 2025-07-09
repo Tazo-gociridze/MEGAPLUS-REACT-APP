@@ -9,10 +9,14 @@ const MainLayout = () => {
   const { sidebar, setSidebar, showScrollTop, scrollToTop } = useMainLayoutLogic();
 
   return (
-    <>
+    <div className="flex min-h-screen flex-col justify-between">
       <Header setSidebar={setSidebar} />
       <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
-      <Outlet />
+
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+
       <Footer />
 
       {showScrollTop && (
@@ -24,8 +28,9 @@ const MainLayout = () => {
           <FaArrowUp />
         </button>
       )}
-    </>
+    </div>
   );
 };
 
 export default MainLayout;
+

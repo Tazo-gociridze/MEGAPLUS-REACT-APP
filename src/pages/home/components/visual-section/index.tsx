@@ -42,48 +42,50 @@ const VisualOfProgram = () => {
     <div className="!mt-10 w-full px-4 py-8">
       <H2Title title={t('visual-section-title')} />
 
-      <Swiper
-        modules={[
-          Navigation,
-          Pagination,
-          Autoplay,
-          Scrollbar,
-          EffectCoverflow,
-          EffectFade,
-          EffectCube,
-          EffectFlip,
-          EffectCreative,
-        ]}
-        spaceBetween={30}
-        slidesPerView={2}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        navigation
-        scrollbar={{ draggable: true }}
-        coverflowEffect={{
-          rotate: 30,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-        }}
-        style={{ maxWidth: '100%', padding: '80px 0px' }}
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <div style={contentStyle}>
-              <Image src={src} height="100%" loading="lazy" />
-              <div className="swiper-lazy-preloader"></div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Image.PreviewGroup>
+        <Swiper
+          modules={[
+            Navigation,
+            Pagination,
+            Autoplay,
+            Scrollbar,
+            EffectCoverflow,
+            EffectFade,
+            EffectCube,
+            EffectFlip,
+            EffectCreative,
+          ]}
+          spaceBetween={30}
+          slidesPerView={2}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          navigation
+          scrollbar={{ draggable: true }}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+          }}
+          style={{ maxWidth: '100%', padding: '80px 0px' }}
+        >
+          {images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <div style={contentStyle}>
+                <Image src={src} height="100%" loading="lazy" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Image.PreviewGroup>
     </div>
   );
 };
 
 export default VisualOfProgram;
+

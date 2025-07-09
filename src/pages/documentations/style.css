@@ -1,0 +1,29 @@
+.ant-menu-item-selected {
+  color: #ff0000 !important; /* Tailwind red-500 */
+}
+
+
+.ant-menu-item-selected .anticon {
+  color: #ff0000 !important;
+}
+
+.ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #ff0000 !important;
+}
+
+
+.dark .ant-menu-item {
+color: white !important;
+}
+
+.dark .ant-menu-submenu-title {
+color: white !important;
+}
+
+.dark .ant-menu-item-selected .anticon {
+  color: white !important;
+}
+
+.dark .ant-menu-submenu{
+    background-color: var(--dark-light-blue);
+}

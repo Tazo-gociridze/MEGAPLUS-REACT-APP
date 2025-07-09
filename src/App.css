@@ -102,8 +102,25 @@ html {
 }
 
 .swiper-scrollbar {
-  height: 3px !important; 
-  border-radius: 3px !important;
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 8px;
+}
+
+.swiper-scrollbar-drag {
+  background: #ff0000 !important;
+  border-radius: 8px;
+  transition: 0.3s !important;
+}
+
+.dark .swiper-scrollbar-drag {
+  background: #e6d7d7 !important;
+  border-radius: 8px;
+  transition: 0.3s !important;
+}
+
+.swiper-scrollbar-drag:hover {
+  background: #e11d48;
 }
 
 

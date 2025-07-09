@@ -10,22 +10,32 @@ const TopHeader = () => {
     >
       <div className="flex items-center gap-x-4 rounded-2xl bg-red-50">
         <IoPhonePortraitOutline className="text-3xl text-red-500 dark:text-red-500" />
-        <a href="tel:995322500601" className="dark:text-[var(--white-gray)] hover:underline hover:text-red-500">
+        <a
+          href="tel:995322500601"
+          className="hover:text-red-500 hover:underline dark:text-[var(--white-gray)]"
+        >
           +995 322-500-601
         </a>
       </div>
       <div className="flex items-center gap-x-4 rounded-2xl bg-red-50">
         <a
           href="mailto:info@megaplus.ge"
-          className="flex items-center gap-x-3 text-[var(--dark-blue)] dark:text-[var(--white-gray)] hover:text-red-500 hover:underline"
+          className="flex items-center gap-x-3 text-[var(--dark-blue)] hover:text-red-500 hover:underline dark:text-[var(--white-gray)]"
         >
           <CiMail className="text-3xl text-red-500" />
           <span>info@megaplus.ge</span>
         </a>
       </div>
       <div className="flex items-center gap-x-4 rounded-2xl bg-red-50">
-        <CiLocationOn className="text-3xl text-red-500 dark:text-red-500" />
-        <span className="dark:text-[var(--white-gray)]">{t('header-address')}</span>
+        <a
+          className="flex items-center gap-x-3 text-[var(--dark-blue)] hover:text-red-500 hover:underline dark:text-[var(--white-gray)]"
+          href="https://maps.app.goo.gl/Q5sABRxT8McCZ5Ts6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CiLocationOn className="text-3xl text-red-500 dark:text-red-500" />
+          <span className="dark:text-[var(--white-gray)]">{t('header-address')}</span>
+        </a>
       </div>
       <div className="flex items-center gap-x-4 rounded-2xl bg-red-50 select-none">
         <CiClock2 className="text-3xl text-red-500 dark:text-red-500" />

@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next"
 const NavBar = () => {
   const { t } = useTranslation('header')
 
+  
+
   return (
         <div className="flex w-screen items-center gap-x-26">
           <Link to={'/'}>
