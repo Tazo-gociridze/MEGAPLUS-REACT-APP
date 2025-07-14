@@ -56,7 +56,7 @@ const Contacts = () => {
               <input type="text" placeholder="Name" />
               <input type="text" placeholder="Number" />
             </div>
-            <button className="!mt-6 rounded-xl cursor-pointer bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md">
+            <button className="!mt-6 rounded-4xl cursor-pointer bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md">
               Submit
             </button>
           </form>

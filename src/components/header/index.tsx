@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ setSidebar }) => {
         >
           <TopHeader />
 
-          <div className="fixed-width horizontal-padding flex w-full items-center !justify-between bg-red-50 !py-3 dark:bg-[var(--dark-blue)]">
+          <div className="!px-10 horizontal-padding flex w-full items-center !justify-between bg-red-50 !py-3 dark:bg-[var(--dark-blue)]">
             <NavBar />
             <HeaderTools setSidebar={setSidebar} />
           </div>

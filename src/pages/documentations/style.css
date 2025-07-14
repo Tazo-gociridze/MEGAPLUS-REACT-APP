@@ -1,29 +1,15 @@
-.ant-menu-item-selected {
-  color: #ff0000 !important; /* Tailwind red-500 */
-}
-
-
-.ant-menu-item-selected .anticon {
-  color: #ff0000 !important;
-}
-
-.ant-menu-submenu-selected > .ant-menu-submenu-title {
-  color: #ff0000 !important;
-}
-
-
-.dark .ant-menu-item {
-color: white !important;
-}
-
-.dark .ant-menu-submenu-title {
-color: white !important;
-}
-
-.dark .ant-menu-item-selected .anticon {
+.custom-menu .ant-menu-item-selected {
+  background-color: #ED1313 !important; 
   color: white !important;
 }
 
-.dark .ant-menu-submenu{
-    background-color: var(--dark-light-blue);
+.custom-menu{}
+
+.custom-menu .ant-menu-item-selected:hover {
+  background-color: #ED1313 !important;
+  color: white !important;
+}
+
+.custom-menu .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #ff4d4f !important; 
 }

@@ -6,7 +6,7 @@ export interface HeaderProps {
 }
 
 const useHeaderLogic = (setSidebar : (value: boolean) => void) => {
-      const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isWideScreen, setIsWideScreen] = useState<boolean>(window.innerWidth > 860);
 
   useEffect(() => {

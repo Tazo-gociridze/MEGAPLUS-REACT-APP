@@ -4,11 +4,11 @@ import { IoMoonOutline } from 'react-icons/io5';
 
 interface ChangeThemeProps {
   dark: boolean;
-  setDark: (value: boolean) => void;
+  setDarkMode: (value: boolean) => void;
 }
 
-const ChangeTheme: FC<ChangeThemeProps> = ({ dark, setDark }) => {
-  return <span onClick={() => setDark(!dark)}>{dark ? <SunOutlined /> : <IoMoonOutline />}</span>;
+const ChangeTheme: FC<ChangeThemeProps> = ({ dark, setDarkMode }) => {
+  return <span onClick={() => setDarkMode(!dark)}>{dark ? <SunOutlined /> : <IoMoonOutline />}</span>;
 };
 
 export default ChangeTheme;

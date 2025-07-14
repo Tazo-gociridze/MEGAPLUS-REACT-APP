@@ -8,6 +8,8 @@ import type { MenuProps } from 'antd';
 
 import { useTranslation } from 'react-i18next';
 import ChangeLangItem from '../../change-lang-item';
+import { useAtom } from 'jotai';
+import { darkThemeAtom, setDarkThemeAtom } from '@/atoms/theme';
 
 const LANGUAGE_STORAGE_KEY = 'selectedLanguage';
 const THEME_STORAGE_KEY = 'darkTheme';
@@ -21,9 +23,11 @@ const languageOptions = {
 };
 
 const useHeaderToolsLogic = () => {
-  const [dark, setDarkState] = useState(false);
   const [lang, setLang] = useState('en');
   const [flag, setFlag] = useState(usaflag);
+  const [dark] = useAtom(darkThemeAtom)
+ const [, setDark] = useAtom(setDarkThemeAtom);
+
 
   const { i18n } = useTranslation()
   useEffect(() => {
@@ -41,7 +45,7 @@ const useHeaderToolsLogic = () => {
     const savedDark = localStorage.getItem(THEME_STORAGE_KEY);
     const isDark = savedDark === 'true';
     document.documentElement.classList.toggle('dark', isDark);
-    setDarkState(isDark);
+    setDark(isDark);
   }, []);
 
   const changeLang = (newLang: string, currentFlag: string) => {
@@ -50,10 +54,10 @@ const useHeaderToolsLogic = () => {
     localStorage.setItem(LANGUAGE_STORAGE_KEY, newLang);
   };
 
-  const setDark = (value: boolean) => {
+  const setDarkMode = (value: boolean) => {
     localStorage.setItem(THEME_STORAGE_KEY, value.toString());
     document.documentElement.classList.toggle('dark', value);
-    setDarkState(value);
+    setDark(value);
   };
 
   const items: MenuProps['items'] = Object.entries(languageOptions).map(
@@ -66,7 +70,7 @@ const useHeaderToolsLogic = () => {
   return {
     items,
     dark,
-    setDark,
+    setDarkMode,
     lang,
     flag,
   };

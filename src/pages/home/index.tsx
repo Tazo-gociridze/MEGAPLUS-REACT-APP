@@ -5,7 +5,7 @@ import VisualOfProgram from './components/visual-section';
 
 const Home = () => {
   return (
-    <main className="fixed-width">
+    <main className="fixed-width !mb-[100px]">
       <Hero />
       <AboutSection />
       <VisualOfProgram />
