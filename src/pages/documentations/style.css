@@ -3,7 +3,6 @@
   color: white !important;
 }
 
-.custom-menu{}
 
 .custom-menu .ant-menu-item-selected:hover {
   background-color: #ED1313 !important;
@@ -12,4 +11,30 @@
 
 .custom-menu .ant-menu-submenu-selected > .ant-menu-submenu-title {
   color: #ff4d4f !important; 
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d44949;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d44949 transparent;
+}
+
+.ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title,
+.ant-menu-submenu.ant-menu-submenu-open .ant-menu {
+  transition: none !important;
+  background-color: inherit !important;
 }

@@ -7,6 +7,10 @@ html {
   padding: 0 13rem !important;
 }
 
+strong{
+  font-weight: 700 !important;
+}
+
 .navLink {
   position: relative;
   display: inline-block;

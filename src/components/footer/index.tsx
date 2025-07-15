@@ -7,7 +7,7 @@ const Footer = () => {
   const pathname = useLocation().pathname;
   return (
     <footer
-      className={`${pathname !== '/docs' ? 'fixed-width' : '!px-10'} w-full !bg-red-50 !pt-10 text-white dark:!bg-[var(--dark-blue)]`}
+      className={`${pathname !== '/docs' ? 'fixed-width' : 'hidden'} w-full !bg-red-50 !pt-10 text-white dark:!bg-[var(--dark-blue)]`}
     >
       <div className="!mb-10 grid grid-cols-2 gap-x-20">
         <div className="flex justify-start gap-x-20">

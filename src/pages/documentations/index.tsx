@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import {
   UserOutlined,
@@ -14,79 +14,101 @@ import {
 } from '@ant-design/icons';
 import { useAtom } from 'jotai';
 import { darkThemeAtom } from '@/atoms/theme';
+import InfoAboutProducts from './docs/products/info-about-products';
+import ProductsFiltration from './docs/products/filtration';
+import ProductsAddEdit from './docs/products/products-add-edit';
+import Discounts from './docs/products/discounts';
+import GroupControl from './docs/products/group-control';
+import Calculation from './docs/products/calculation';
+import AdditionalFunctions from './docs/products/additional-functions';
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
+
+const LOCAL_STORAGE_KEY = 'documentation-active-key';
 
 const Documentations = () => {
   const [activeKey, setActiveKey] = useState('1');
   const [isDark] = useAtom(darkThemeAtom);
 
+  useEffect(() => {
+    const savedKey = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedKey) {
+      setActiveKey(savedKey);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, activeKey);
+  }, [activeKey]);
+
   const renderContent = () => {
     switch (activeKey) {
       case '1':
-        return <div>ინფორმაცია პროდუქციის შესახებ</div>;
+        return <InfoAboutProducts />;
       case '2':
-        return <div>ფილტრაცია</div>;
+        return <ProductsFiltration />;
       case '3':
-        return <div>პროდუქციის შექმნა / ჩასწორება</div>;
+        return <ProductsAddEdit />;
       case '4':
-        return <div>ფასდაკლებების მართვა</div>;
+        return <GroupControl/>;
       case '5':
-        return <div>კალკულაცია</div>;
+        return <Discounts />;
       case '6':
-        return <div>დამატებითი ფუნქციები</div>;
+        return <Calculation />;
       case '7':
-        return <div>მიღება</div>;
+        return <AdditionalFunctions />;
       case '8':
-        return <div>ზედნადების გაუქმება</div>;
+        return <div>მიღება</div>;
       case '9':
-        return <div>ხელშეკრულების შეცვლა</div>;
+        return <div>ზედნადების გაუქმება</div>;
       case '10':
-        return <div>მიღება შესყიდვის აქტით</div>;
+        return <div>ხელშეკრულების შეცვლა</div>;
       case '11':
-        return <div>ნავაჭრი</div>;
+        return <div>მიღება შესყიდვის აქტით</div>;
       case '12':
-        return <div>სალაროს მოძრაობა</div>;
+        return <div>ნავაჭრი</div>;
       case '13':
-        return <div>კლიენტები</div>;
+        return <div>სალაროს მოძრაობა</div>;
       case '14':
-        return <div>სალაროს წიგნი</div>;
+        return <div>კლიენტები</div>;
       case '15':
-        return <div>ფასდაკლებები</div>;
+        return <div>სალაროს წიგნი</div>;
       case '16':
-        return <div>დაბრუნება</div>;
+        return <div>ფასდაკლებები</div>;
       case '17':
-        return <div>ხელით დაბრუნება</div>;
+        return <div>დაბრუნება</div>;
       case '18':
-        return <div>მომწოდებლები</div>;
+        return <div>ხელით დაბრუნება</div>;
       case '19':
-        return <div>მომწოდებლის შექმნა</div>;
+        return <div>მომწოდებლები</div>;
       case '20':
-        return <div>გადახდები</div>;
+        return <div>მომწოდებლის შექმნა</div>;
       case '21':
-        return <div>რეპორტი/რეალიზაცია</div>;
+        return <div>გადახდები</div>;
       case '22':
-        return <div>რეპორტი/მიღება</div>;
+        return <div>რეპორტი/რეალიზაცია</div>;
       case '23':
-        return <div>რეპორტი/მომწოდებლები</div>;
+        return <div>რეპორტი/მიღება</div>;
       case '24':
-        return <div>რეპორტი/ნაშთები</div>;
+        return <div>რეპორტი/მომწოდებლები</div>;
       case '25':
-        return <div>სასწორები</div>;
+        return <div>რეპორტი/ნაშთები</div>;
       case '26':
-        return <div>პრინტერები</div>;
+        return <div>სასწორები</div>;
       case '27':
-        return <div>მომხმარებლის შექმნა</div>;
+        return <div>პრინტერები</div>;
       case '28':
-        return <div>პაროლის შეცვლა</div>;
+        return <div>მომხმარებლის შექმნა</div>;
       case '29':
-        return <div>უფლებები</div>;
+        return <div>პაროლის შეცვლა</div>;
       case '30':
-        return <div>რეალიზაცია</div>;
+        return <div>უფლებები</div>;
       case '31':
-        return <div>ჩამოწერა</div>;
+        return <div>რეალიზაცია</div>;
       case '32':
+        return <div>ჩამოწერა</div>;
+      case '33':
         return <div>ჩამოწერის გაუქმება</div>;
       default:
         return <div>აირჩიე ელემენტი მენიუდან</div>;
@@ -94,17 +116,11 @@ const Documentations = () => {
   };
 
   return (
-    <Layout className="min-h-screen bg-[#141414] text-white">
+    <Layout className="max-h-[calc(100vh-60px)] bg-[#141414] text-white">
       <Sider
         width={450}
         theme={isDark ? 'dark' : 'light'}
-        className="sticky top-0 h-[calc(100vh-60px)] overflow-y-auto"
-        onMouseEnter={() => {
-          document.body.style.overflow = 'hidden';
-        }}
-        onMouseLeave={() => {
-          document.body.style.overflow = 'auto';
-        }}
+        className="custom-scrollbar sticky top-0 h-[calc(100vh-60px)] overflow-y-auto"
       >
         <Menu
           theme={isDark ? 'dark' : 'light'}
@@ -129,68 +145,69 @@ const Documentations = () => {
             <Menu.Item key="1">ინფორმაცია პროდუქციის შესახებ</Menu.Item>
             <Menu.Item key="2">ფილტრაცია</Menu.Item>
             <Menu.Item key="3">პროდუქციის შექმნა / ჩასწორება</Menu.Item>
-            <Menu.Item key="4">ფასდაკლებების მართვა</Menu.Item>
-            <Menu.Item key="5">კალკულაცია</Menu.Item>
-            <Menu.Item key="6">დამატებითი ფუნქციები</Menu.Item>
+            <Menu.Item key="4">ჯგუფების კონტროლი</Menu.Item>
+            <Menu.Item key="5">ფასდაკლებების მართვა</Menu.Item>
+            <Menu.Item key="6">კალკულაცია</Menu.Item>
+            <Menu.Item key="7">დამატებითი ფუნქციები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="მიღება" className="mb-6">
-            <Menu.Item key="7">მიღება</Menu.Item>
-            <Menu.Item key="8">ზედნადების გაუქმება</Menu.Item>
-            <Menu.Item key="9">ხელშეკრულების შეცვლა</Menu.Item>
-            <Menu.Item key="10">მიღება შესყიდვის აქტით</Menu.Item>
+            <Menu.Item key="8">მიღება</Menu.Item>
+            <Menu.Item key="9">ზედნადების გაუქმება</Menu.Item>
+            <Menu.Item key="10">ხელშეკრულების შეცვლა</Menu.Item>
+            <Menu.Item key="11">მიღება შესყიდვის აქტით</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub3" icon={<DollarOutlined />} title="სალარო" className="mb-6">
-            <Menu.Item key="11">ნავაჭრი</Menu.Item>
-            <Menu.Item key="12">სალაროს მოძრაობა</Menu.Item>
-            <Menu.Item key="13">კლიენტები</Menu.Item>
-            <Menu.Item key="14">სალაროს წიგნი</Menu.Item>
-            <Menu.Item key="15">ფასდაკლებები</Menu.Item>
+            <Menu.Item key="12">ნავაჭრი</Menu.Item>
+            <Menu.Item key="13">სალაროს მოძრაობა</Menu.Item>
+            <Menu.Item key="14">კლიენტები</Menu.Item>
+            <Menu.Item key="15">სალაროს წიგნი</Menu.Item>
+            <Menu.Item key="16">ფასდაკლებები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub4" icon={<UndoOutlined />} title="დაბრუნება" className="mb-6">
-            <Menu.Item key="16">დაბრუნება</Menu.Item>
-            <Menu.Item key="17">ხელით დაბრუნება</Menu.Item>
+            <Menu.Item key="17">დაბრუნება</Menu.Item>
+            <Menu.Item key="18">ხელით დაბრუნება</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub5" icon={<TeamOutlined />} title="მომწოდებლები" className="mb-6">
-            <Menu.Item key="18">მომწოდებლები</Menu.Item>
-            <Menu.Item key="19">მომწოდებლის შექმნა</Menu.Item>
-            <Menu.Item key="20">გადახდები</Menu.Item>
+            <Menu.Item key="19">მომწოდებლები</Menu.Item>
+            <Menu.Item key="20">მომწოდებლის შექმნა</Menu.Item>
+            <Menu.Item key="21">გადახდები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub6" icon={<FileTextOutlined />} title="რეპორტები" className="mb-6">
-            <Menu.Item key="21">ფილტრები/რეალიზაცია</Menu.Item>
-            <Menu.Item key="22">რეპორტი/მიღება</Menu.Item>
-            <Menu.Item key="23">რეპორტი/მომწოდებლები</Menu.Item>
-            <Menu.Item key="24">რეპორტი/ნაშთები</Menu.Item>
+            <Menu.Item key="22">ფილტრები/რეალიზაცია</Menu.Item>
+            <Menu.Item key="23">რეპორტი/მიღება</Menu.Item>
+            <Menu.Item key="24">რეპორტი/მომწოდებლები</Menu.Item>
+            <Menu.Item key="25">რეპორტი/ნაშთები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub7" icon={<SettingOutlined />} title="პარამეტრები" className="mb-6">
-            <Menu.Item key="25">სასწორები</Menu.Item>
-            <Menu.Item key="26">პრინტერები</Menu.Item>
+            <Menu.Item key="26">სასწორები</Menu.Item>
+            <Menu.Item key="27">პრინტერები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub8" icon={<UserAddOutlined />} title="მომხმარებელი" className="mb-6">
-            <Menu.Item key="27">მომხმარებლის შექმნა</Menu.Item>
-            <Menu.Item key="28">პაროლის შეცვლა</Menu.Item>
-            <Menu.Item key="29">უფლებები</Menu.Item>
+            <Menu.Item key="28">მომხმარებლის შექმნა</Menu.Item>
+            <Menu.Item key="29">პაროლის შეცვლა</Menu.Item>
+            <Menu.Item key="30">უფლებები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub9" icon={<ShoppingCartOutlined />} title="რეალიზაცია" className="mb-6">
-            <Menu.Item key="30">რეალიზაცია</Menu.Item>
+            <Menu.Item key="31">რეალიზაცია</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub10" icon={<DeleteOutlined />} title="ჩამოწერა" className="mb-6">
-            <Menu.Item key="31">ჩამოწერა</Menu.Item>
-            <Menu.Item key="32">ჩამოწერის გაუქმება</Menu.Item>
+            <Menu.Item key="32">ჩამოწერა</Menu.Item>
+            <Menu.Item key="33">ჩამოწერის გაუქმება</Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>
 
-      <Layout className="overflow-auto pl-6">
-        <Content className="min-h-[calc(100vh-60px)] !bg-white !p-8 pt-[90px] text-white dark:!bg-[var(--dark-blue)]">
+      <Layout className="pl-6">
+        <Content className="custom-scrollbar max-h-[calc(100vh-60px)] overflow-y-auto !bg-white !px-8 pt-[90px] !pb-24 dark:!bg-[var(--dark-light-blue)] dark:!text-[var(--white-gray)]">
           {renderContent()}
         </Content>
       </Layout>
