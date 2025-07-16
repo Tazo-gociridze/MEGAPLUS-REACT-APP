@@ -21,6 +21,13 @@ import Discounts from './docs/products/discounts';
 import GroupControl from './docs/products/group-control';
 import Calculation from './docs/products/calculation';
 import AdditionalFunctions from './docs/products/additional-functions';
+import Reception from './docs/reception/reception';
+import AcceptanceByPurchaseAct from './docs/reception/acceptance-by-purchase-act';
+import ChangeContract from './docs/reception/change-contract';
+import CancellationExemption from './docs/reception/cancellation-exemptions';
+import Supplier from './docs/suppliers/suppliers';
+import CreateSupplier from './docs/suppliers/create-supplier';
+import Payments from './docs/suppliers/payments';
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -59,13 +66,13 @@ const Documentations = () => {
       case '7':
         return <AdditionalFunctions />;
       case '8':
-        return <div>მიღება</div>;
+        return <Reception />;
       case '9':
-        return <div>ზედნადების გაუქმება</div>;
+        return <CancellationExemption/>;
       case '10':
-        return <div>ხელშეკრულების შეცვლა</div>;
+        return <ChangeContract />;
       case '11':
-        return <div>მიღება შესყიდვის აქტით</div>;
+        return <AcceptanceByPurchaseAct/>;
       case '12':
         return <div>ნავაჭრი</div>;
       case '13':
@@ -81,11 +88,11 @@ const Documentations = () => {
       case '18':
         return <div>ხელით დაბრუნება</div>;
       case '19':
-        return <div>მომწოდებლები</div>;
+        return <Supplier/>;
       case '20':
-        return <div>მომწოდებლის შექმნა</div>;
+        return <CreateSupplier/>;
       case '21':
-        return <div>გადახდები</div>;
+        return <Payments/>;
       case '22':
         return <div>რეპორტი/რეალიზაცია</div>;
       case '23':
@@ -116,7 +123,7 @@ const Documentations = () => {
   };
 
   return (
-    <Layout className="max-h-[calc(100vh-60px)] bg-[#141414] text-white">
+    <Layout className="max-h-[calc(100vh)] bg-[#141414] text-white">
       <Sider
         width={450}
         theme={isDark ? 'dark' : 'light'}
@@ -153,7 +160,7 @@ const Documentations = () => {
 
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="მიღება" className="mb-6">
             <Menu.Item key="8">მიღება</Menu.Item>
-            <Menu.Item key="9">ზედნადების გაუქმება</Menu.Item>
+            <Menu.Item key="9">ზედნადების მიღების გაუქმება</Menu.Item>
             <Menu.Item key="10">ხელშეკრულების შეცვლა</Menu.Item>
             <Menu.Item key="11">მიღება შესყიდვის აქტით</Menu.Item>
           </SubMenu>

@@ -1,5 +1,6 @@
 import H2Title from '@/utils/h2title';
 import { Image } from 'antd';
+import { extraFunctionalityIcons } from './data';
 
 const AdditionalFunctions = () => {
   return (
@@ -9,99 +10,16 @@ const AdditionalFunctions = () => {
         <Image
           width={'80%'}
           height={'80%'}
-          preview={false}
           src="https://megaplus.vercel.app/assets/images/docs/extrafunctionality-table.png"
         />
       </div>
-      <div className="!mt-8">
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
-        <div className='flex items-center gap-x-4 !mb-6'>
-          <Image
-            preview={false}
-            src="https://megaplus.vercel.app/assets/images/docs/scale-icon.png"
-          />
-          <p>
-            სასწორზე გადაგზავნა , სასწორზე გადასაგზავნად აუცილებელია, რომ პროდუქციას ქონდეს შიდა
-            კოდი და ერთეულში ეწეროს „კგ“ ან „ცალი“. არარის საჭირო კონკრეტული პროდუქციების მონიშვნა,
-            ხატულაზე დაჭერისას ავტომატურად გადაიგზავნება ყველა წონის პროდუქცია.
-          </p>
-        </div>
+      <div className="!mt-8 *:!mb-12">
+        {extraFunctionalityIcons.map((icon, index) => (
+          <div key={index} className="flex items-center gap-x-4">
+            <Image preview={false} src={icon.src} width={icon.width} height={icon.height} />
+            <p>{icon.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
