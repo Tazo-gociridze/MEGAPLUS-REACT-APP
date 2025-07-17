@@ -5,10 +5,10 @@ import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
 const Contacts = () => {
   return (
     <div className="fixed-width flex h-[100vh] w-full items-center">
-      <div className="grid w-full grid-cols-2 overflow-hidden rounded-2xl border-b-8 border-red-500 bg-white">
+      <div className="grid w-full grid-cols-2 overflow-hidden rounded-2xl border-b-8 border-red-500 bg-white dark:bg-[var(--dark-light-blue)] dark:text-white">
         <div className="!pb-15">
           <div className="flex items-start justify-between">
-            <H2Title className="!px-10 text-xl" title="Contact us" />
+            <H2Title className="!px-10 text-xl dark:text-[]" title="Contact us" />
           </div>
           <div className="!mt-10 flex justify-between !px-9">
             <div className="flex flex-col gap-y-6 *:flex *:items-center *:gap-x-5 *:text-xl">
@@ -51,7 +51,7 @@ const Contacts = () => {
           </div>
           <div className="!mt-10 h-[1px] w-full bg-[#a598983a]"></div>
           <form className="w-full !px-8">
-            <p className="!mt-10 text-gray-600">დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით</p>
+            <p className="!mt-10 text-gray-600 dark:text-white">დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით</p>
             <div className="!mt-5 grid grid-cols-2 gap-x-4 *:rounded-4xl *:border-[1px] *:border-[#665e5e49] *:!px-4 *:!py-2">
               <input type="text" placeholder="Name" />
               <input type="text" placeholder="Number" />

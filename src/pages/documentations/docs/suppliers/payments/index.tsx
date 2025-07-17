@@ -1,6 +1,6 @@
 import H2Title from '@/utils/h2title';
 import { Image } from 'antd';
-import { financialStatus } from './data';
+import { contractInfo, financialStatus, paymentInfo } from './data';
 
 const Payments = () => {
   return (
@@ -77,19 +77,82 @@ const Payments = () => {
       </div>
 
       <div>
-        <p className="!mt-3 inline-flex items-center gap-x-2 leading-relaxed">
+        <p className="!my-3">
           ავირჩიოთ კონკრეტული თარიღი რომელ დღესაც გვაინტერესებს რა გვაქვს გადასახადი ან რა გვქონდა
           და დავაჭიროთ
           <Image
             src="https://megaplus.vercel.app/assets/images/docs/refresh-arrows.png"
             preview={false}
             alt="refresh"
-            width={38}
-            height={38}
-          />
-          სრული ვალი - ითვლის მარტო ხელშეკრულების მიხედვით რა
+            width={34}
+            height={34}
+            className="inline-block align-middle"
+          />{' '}
+          <br />
+          <strong> სრული ვალი</strong> - ითვლის მარტო ხელშეკრულების მიხედვით რა გვაქვს გადასახდელი,
+          არ ითვალისწინებს ზედმეტ ან ნაკლებ გადახდებს. აუცილებელია რომ გვქონდეს მონიშნული.
         </p>
+        <ul className="!mt-4 list-disc !space-y-4 !pl-5 text-sm leading-relaxed">
+          {contractInfo.map((item, index) => (
+            <li key={index}>
+              <strong>{item.label}</strong> - {item.description}
+            </li>
+          ))}
+        </ul>
       </div>
+      <div>
+        <p className="!mt-6 !mb-3">
+          დავალიანების მოდულში, ძიებაში მოვფილტროთ ფუდმარტი და ვნახოთ დავალიანება:
+        </p>
+
+        <Image
+          src="https://megaplus.vercel.app/assets/images/docs/suppliers-main-table-top.png"
+          preview={false}
+        />
+      </div>
+      <div>
+        <p className="!mt-6 !mb-3">
+          როგორც ვხედავთ ფუდმარტთან პირველი ხელშეკრულების მიხედვით არ გვაქვს არაფერი გადასახდელი
+          ხოლო მეორე ხელშეკრულების მიხედვით 314,70 გვაქვს გადასახდელი. გადახდის შემთხვევაში, როგორც
+          აღვნიშნეთ პროგრამაში აუცილებელია, რომ გავატაროთ ეს გადახდა, პროგრამაში გატარების დროს
+          აუცილებელია, რომ მივუთითოთ რომელი ხელშეკრულებით გადავიხადეთ თანხა, რადგან 314.70-ს
+          გამოაკლდეს გადახდილი თანხა. დავაკლიკოთ „კოდი“- ში ჩაწერილ ხელშეკრულების ნომერს მაუსის
+          მარცხენა ღილაკით და გადმოვიდეთ გადახდებში. როგორც ვხედავთ მომწოდებელი ავტომატურად
+          მოგვიძებნა.
+        </p>
+
+        <Image
+          src="https://megaplus.vercel.app/assets/images/docs/suppliers-chosen-table.png"
+          preview={false}
+        />
+      </div>
+      <div>
+        <p className="!mt-6 !mb-3">ახლა შევიყვანთ ინფორმაცია გადახდის შესახებ:</p>
+        <Image
+          src="https://megaplus.vercel.app/assets/images/docs/suppliers-bottom.png"
+          preview={false}
+        />
+        <ul className="!mt-4 list-disc !space-y-4 !pl-5 text-sm leading-relaxed">
+          {paymentInfo.map((item, index) => (
+            <li key={index}>
+              <strong>{item.label}</strong> - {item.description}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p className='!mt-12 !mb-3'>დავაჭიროთ გადახდას ავირჩიოთ გადახდის თარიღი და გადახდა დაფიქსირებულია. მომწოდებელზე როგორც
+          ბალანსიდან ასევე დავალიანებიდან გამოაკლდება ეს თანხა.</p>
+        <Image
+          src="https://megaplus.vercel.app/assets/images/docs/suppliers-small-table.png"
+          preview={false}
+        />
+      </div>
+<div>
+        <p className='!mt-6 !mb-2'>როგორც ვხედავთ გადახდა დაფიქსირდა და დავალიანებაში გამოაკლდა.</p>
+      <Image src='https://megaplus.vercel.app/assets/images/docs/suppliers-last-picture.png' preview={false}/>
+</div>
     </div>
   );
 };
