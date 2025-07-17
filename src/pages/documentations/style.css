@@ -35,6 +35,5 @@
 
 .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title,
 .ant-menu-submenu.ant-menu-submenu-open .ant-menu {
-  transition: none !important;
   background-color: inherit !important;
 }
