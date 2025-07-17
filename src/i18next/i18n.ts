@@ -17,15 +17,12 @@ i18n
     backend: {
       loadPath: '/locale/{{lng}}/{{ns}}.json',
     },
-    ns: [
-      'header',
-      'home',
-      'tariffs'
-    ],
+    ns: ['header', 'home', 'tariffs'],
     defaultNS: 'header',
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
     },
   });
 

@@ -44,7 +44,7 @@ const DropdownContent: FC<DropdownContentPropsTypes> = ({
           {feature.description.map((item) => (
             <p
               key={item.name}
-              className={`!mb-4 ${item.active ? 'text-green-600' : 'text-red-500 line-through'}`}
+              className={`!mb-4 text-[15px] ${item.active ? 'text-green-600' : 'text-red-500 line-through'}`}
             >
               {item.name}
             </p>

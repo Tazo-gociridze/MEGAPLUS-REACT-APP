@@ -16,13 +16,19 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
         <div className="!mt-6 !mb-4 flex items-center gap-x-4">
           📞
           <a href="tel:+995599123456" className="!text-red-600 hover:!underline">
-            +995 592 00 32 32
+            +995 322-500-601
+          </a>
+        </div>
+        <div className="!mt-6 !mb-4 flex items-center gap-x-4">
+          📞
+          <a href="tel:+995599123456" className="!text-red-600 hover:!underline">
+            +995 322-344-425
           </a>
         </div>
         <div className="flex items-center gap-x-4">
           📧{' '}
-          <a href="mailto:INFO@MEGAPLUS.GE" className="!text-red-600 hover:!underline">
-            INFO@MEGAPLUS.GE
+          <a href="mailto:info@megaplus.ge" className="!text-red-600 hover:!underline">
+            info@megaplus.ge
           </a>
         </div>
       </div>

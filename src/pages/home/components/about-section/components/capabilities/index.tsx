@@ -8,7 +8,7 @@ import H2Title from '@/utils/h2title';
 
 const AboutData: string[] = [
   'lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
+  'მიღება',
   'lorem ipsum dolor molor color',
   'lorem ipsum dolor molor color',
   'lorem ipsum dolor molor color',

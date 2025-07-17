@@ -23,7 +23,7 @@ const languageOptions = {
 };
 
 const useHeaderToolsLogic = () => {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('ge');
   const [flag, setFlag] = useState(usaflag);
   const [dark] = useAtom(darkThemeAtom)
  const [, setDark] = useAtom(setDarkThemeAtom);
@@ -46,6 +46,7 @@ const useHeaderToolsLogic = () => {
     const isDark = savedDark === 'true';
     document.documentElement.classList.toggle('dark', isDark);
     setDark(isDark);
+    //eslint-disable-next-line
   }, []);
 
   const changeLang = (newLang: string, currentFlag: string) => {

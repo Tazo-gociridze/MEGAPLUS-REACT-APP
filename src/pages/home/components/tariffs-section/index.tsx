@@ -29,7 +29,7 @@ const Tariffs = () => {
         {tariffs.map((tariff, index) => (
           <Col xs={24} sm={12} md={8} key={index}>
             <Card
-              className={`!border-b-solid rounded-2xl !border-b-[5px] border-gray-200 !border-b-red-500 !p-3 shadow-md dark:!border-gray-600 dark:!border-b-red-500 dark:!bg-[var(--dark-light-blue)]`}
+              className={`!border-b-solid rounded-2xl !border-b-[5px] !bg-[#ffffff] border-gray-200 !border-b-red-500 !p-3 shadow-md dark:!border-gray-600 dark:!border-b-red-500 dark:!bg-[var(--dark-light-blue)]`}
             >
               <OrderBtn showModal={showModal} tariff={tariff} />
 

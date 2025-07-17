@@ -28,6 +28,9 @@ import CancellationExemption from './docs/reception/cancellation-exemptions';
 import Supplier from './docs/suppliers/suppliers';
 import CreateSupplier from './docs/suppliers/create-supplier';
 import Payments from './docs/suppliers/payments';
+import Purchased from './docs/cashier/purchased';
+import SalaryMovement from './docs/cashier/salary-movement';
+import Clients from './docs/cashier/clients';
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -58,7 +61,7 @@ const Documentations = () => {
       case '3':
         return <ProductsAddEdit />;
       case '4':
-        return <GroupControl/>;
+        return <GroupControl />;
       case '5':
         return <Discounts />;
       case '6':
@@ -68,54 +71,50 @@ const Documentations = () => {
       case '8':
         return <Reception />;
       case '9':
-        return <CancellationExemption/>;
+        return <CancellationExemption />;
       case '10':
         return <ChangeContract />;
       case '11':
-        return <AcceptanceByPurchaseAct/>;
+        return <AcceptanceByPurchaseAct />;
       case '12':
-        return <div>ნავაჭრი</div>;
+        return <Purchased />;
       case '13':
-        return <div>სალაროს მოძრაობა</div>;
+        return <SalaryMovement />;
       case '14':
-        return <div>კლიენტები</div>;
+        return <Clients />;
       case '15':
-        return <div>სალაროს წიგნი</div>;
-      case '16':
-        return <div>ფასდაკლებები</div>;
-      case '17':
         return <div>დაბრუნება</div>;
-      case '18':
+      case '16':
         return <div>ხელით დაბრუნება</div>;
+      case '17':
+        return <Supplier />;
+      case '18':
+        return <CreateSupplier />;
       case '19':
-        return <Supplier/>;
+        return <Payments />;
       case '20':
-        return <CreateSupplier/>;
-      case '21':
-        return <Payments/>;
-      case '22':
         return <div>რეპორტი/რეალიზაცია</div>;
-      case '23':
+      case '21':
         return <div>რეპორტი/მიღება</div>;
-      case '24':
+      case '22':
         return <div>რეპორტი/მომწოდებლები</div>;
-      case '25':
+      case '23':
         return <div>რეპორტი/ნაშთები</div>;
-      case '26':
+      case '24':
         return <div>სასწორები</div>;
-      case '27':
+      case '25':
         return <div>პრინტერები</div>;
-      case '28':
+      case '26':
         return <div>მომხმარებლის შექმნა</div>;
-      case '29':
+      case '27':
         return <div>პაროლის შეცვლა</div>;
-      case '30':
+      case '28':
         return <div>უფლებები</div>;
-      case '31':
+      case '29':
         return <div>რეალიზაცია</div>;
-      case '32':
+      case '30':
         return <div>ჩამოწერა</div>;
-      case '33':
+      case '31':
         return <div>ჩამოწერის გაუქმება</div>;
       default:
         return <div>აირჩიე ელემენტი მენიუდან</div>;
@@ -169,46 +168,44 @@ const Documentations = () => {
             <Menu.Item key="12">ნავაჭრი</Menu.Item>
             <Menu.Item key="13">სალაროს მოძრაობა</Menu.Item>
             <Menu.Item key="14">კლიენტები</Menu.Item>
-            <Menu.Item key="15">სალაროს წიგნი</Menu.Item>
-            <Menu.Item key="16">ფასდაკლებები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub4" icon={<UndoOutlined />} title="დაბრუნება" className="mb-6">
-            <Menu.Item key="17">დაბრუნება</Menu.Item>
-            <Menu.Item key="18">ხელით დაბრუნება</Menu.Item>
+            <Menu.Item key="15">დაბრუნება</Menu.Item>
+            <Menu.Item key="16">ხელით დაბრუნება</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub5" icon={<TeamOutlined />} title="მომწოდებლები" className="mb-6">
-            <Menu.Item key="19">მომწოდებლები</Menu.Item>
-            <Menu.Item key="20">მომწოდებლის შექმნა</Menu.Item>
-            <Menu.Item key="21">გადახდები</Menu.Item>
+            <Menu.Item key="17">მომწოდებლები</Menu.Item>
+            <Menu.Item key="18">მომწოდებლის შექმნა</Menu.Item>
+            <Menu.Item key="19">გადახდები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub6" icon={<FileTextOutlined />} title="რეპორტები" className="mb-6">
-            <Menu.Item key="22">ფილტრები/რეალიზაცია</Menu.Item>
-            <Menu.Item key="23">რეპორტი/მიღება</Menu.Item>
-            <Menu.Item key="24">რეპორტი/მომწოდებლები</Menu.Item>
-            <Menu.Item key="25">რეპორტი/ნაშთები</Menu.Item>
+            <Menu.Item key="20">ფილტრები/რეალიზაცია</Menu.Item>
+            <Menu.Item key="21">რეპორტი/მიღება</Menu.Item>
+            <Menu.Item key="22">რეპორტი/მომწოდებლები</Menu.Item>
+            <Menu.Item key="23">რეპორტი/ნაშთები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub7" icon={<SettingOutlined />} title="პარამეტრები" className="mb-6">
-            <Menu.Item key="26">სასწორები</Menu.Item>
-            <Menu.Item key="27">პრინტერები</Menu.Item>
+            <Menu.Item key="24">სასწორები</Menu.Item>
+            <Menu.Item key="25">პრინტერები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub8" icon={<UserAddOutlined />} title="მომხმარებელი" className="mb-6">
-            <Menu.Item key="28">მომხმარებლის შექმნა</Menu.Item>
-            <Menu.Item key="29">პაროლის შეცვლა</Menu.Item>
-            <Menu.Item key="30">უფლებები</Menu.Item>
+            <Menu.Item key="26">მომხმარებლის შექმნა</Menu.Item>
+            <Menu.Item key="27">პაროლის შეცვლა</Menu.Item>
+            <Menu.Item key="28">უფლებები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub9" icon={<ShoppingCartOutlined />} title="რეალიზაცია" className="mb-6">
-            <Menu.Item key="31">რეალიზაცია</Menu.Item>
+            <Menu.Item key="29">რეალიზაცია</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub10" icon={<DeleteOutlined />} title="ჩამოწერა" className="mb-6">
-            <Menu.Item key="32">ჩამოწერა</Menu.Item>
-            <Menu.Item key="33">ჩამოწერის გაუქმება</Menu.Item>
+            <Menu.Item key="30">ჩამოწერა</Menu.Item>
+            <Menu.Item key="31">ჩამოწერის გაუქმება</Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>
