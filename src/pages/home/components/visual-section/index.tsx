@@ -29,14 +29,14 @@ const contentStyle: CSSProperties = {
 
 const images = [
   'https://megaplus-images.vercel.app/assets/03-d_FwQrzv.png',
+  'https://megaplus-images.vercel.app/assets/06-CSNmc8vH.png',
+  'https://megaplus-images.vercel.app/assets/09-B6EclifD.png',
   'https://megaplus-images.vercel.app/assets/05-BVia0kDj.png',
   'https://megaplus-images.vercel.app/assets/08-Bc5tk6nY.png',
   'https://megaplus-images.vercel.app/assets/01-B-37h7Tt.png',
   'https://megaplus-images.vercel.app/assets/02-B0_mV5oA.png',
   'https://megaplus-images.vercel.app/assets/04-DccU6nZH.png',
-  'https://megaplus-images.vercel.app/assets/06-CSNmc8vH.png',
-  'https://megaplus-images.vercel.app/assets/07-Cof3NVUU.png',
-  'https://megaplus-images.vercel.app/assets/09-B6EclifD.png',
+  'https://megaplus-images.vercel.app/assets/07-Cof3NVUU.png', 
   'https://megaplus-images.vercel.app/assets/10-BXIFy2e7.png',
 ];
 

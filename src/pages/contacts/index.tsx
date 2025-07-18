@@ -1,8 +1,33 @@
+import { useState } from 'react';
 import H2Title from '@/utils/h2title';
 import { CiLocationOn, CiMail, CiPhone } from 'react-icons/ci';
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa6';
 
 const Contacts = () => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('http://localhost:5000/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, phone }),
+    });
+
+    const result = await response.text();
+    setMessage(result);
+  } catch (err) {
+    console.error(err);
+    setMessage('დაფიქსირდა შეცდომა. სცადე ხელახლა.');
+  }
+};
+
   return (
     <div className="fixed-width flex h-[100vh] w-full items-center">
       <div className="grid w-full grid-cols-2 overflow-hidden rounded-2xl border-b-8 border-red-500 bg-white dark:bg-[var(--dark-light-blue)] dark:text-white">
@@ -50,15 +75,35 @@ const Contacts = () => {
             </div>
           </div>
           <div className="!mt-10 h-[1px] w-full bg-[#a598983a]"></div>
-          <form className="w-full !px-8">
-            <p className="!mt-10 text-gray-600 dark:text-white">დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით</p>
+          <form onSubmit={handleSubmit} className="w-full !px-8">
+            <p className="!mt-10 text-gray-600 dark:text-white">
+              დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით
+            </p>
             <div className="!mt-5 grid grid-cols-2 gap-x-4 *:rounded-4xl *:border-[1px] *:border-[#665e5e49] *:!px-4 *:!py-2">
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Number" />
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
             </div>
-            <button className="!mt-6 rounded-4xl cursor-pointer bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md">
+            <button
+              type="submit"
+              className="!mt-6 rounded-4xl cursor-pointer bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md"
+            >
               Submit
             </button>
+            {message && (
+              <p className="mt-4 text-green-600 dark:text-white">{message}</p>
+            )}
           </form>
         </div>
         <div className="h-full w-full overflow-hidden dark:shadow-sm">

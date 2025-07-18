@@ -31,6 +31,12 @@ import Payments from './docs/suppliers/payments';
 import Purchased from './docs/cashier/purchased';
 import SalaryMovement from './docs/cashier/salary-movement';
 import Clients from './docs/cashier/clients';
+import Return from './docs/return/return';
+import ReturnManual from './docs/return/return-manual';
+import ReportsRealisation from './docs/reports/reports-realisation';
+import ReportsReception from './docs/reports/reports-reception';
+import ReportsSuppliers from './docs/reports/reports-suppliers';
+import ReportsRemainings from './docs/reports/reports-remainings';
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -83,9 +89,9 @@ const Documentations = () => {
       case '14':
         return <Clients />;
       case '15':
-        return <div>დაბრუნება</div>;
+        return <Return />;
       case '16':
-        return <div>ხელით დაბრუნება</div>;
+        return <ReturnManual/>;
       case '17':
         return <Supplier />;
       case '18':
@@ -93,13 +99,13 @@ const Documentations = () => {
       case '19':
         return <Payments />;
       case '20':
-        return <div>რეპორტი/რეალიზაცია</div>;
+        return <ReportsRealisation />;
       case '21':
-        return <div>რეპორტი/მიღება</div>;
+        return <ReportsReception />;
       case '22':
-        return <div>რეპორტი/მომწოდებლები</div>;
+        return <ReportsSuppliers />;
       case '23':
-        return <div>რეპორტი/ნაშთები</div>;
+        return <ReportsRemainings />;
       case '24':
         return <div>სასწორები</div>;
       case '25':
@@ -182,10 +188,10 @@ const Documentations = () => {
           </SubMenu>
 
           <SubMenu key="sub6" icon={<FileTextOutlined />} title="რეპორტები" className="mb-6">
-            <Menu.Item key="20">ფილტრები/რეალიზაცია</Menu.Item>
-            <Menu.Item key="21">რეპორტი/მიღება</Menu.Item>
-            <Menu.Item key="22">რეპორტი/მომწოდებლები</Menu.Item>
-            <Menu.Item key="23">რეპორტი/ნაშთები</Menu.Item>
+            <Menu.Item key="20">ფილტრები / რეალიზაცია</Menu.Item>
+            <Menu.Item key="21">რეპორტი / მიღება</Menu.Item>
+            <Menu.Item key="22">რეპორტი / მომწოდებლები</Menu.Item>
+            <Menu.Item key="23">რეპორტი / ნაშთები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub7" icon={<SettingOutlined />} title="პარამეტრები" className="mb-6">
