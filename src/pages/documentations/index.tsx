@@ -37,6 +37,14 @@ import ReportsRealisation from './docs/reports/reports-realisation';
 import ReportsReception from './docs/reports/reports-reception';
 import ReportsSuppliers from './docs/reports/reports-suppliers';
 import ReportsRemainings from './docs/reports/reports-remainings';
+import TerminalsFiscalAparats from './docs/params/terminals-fiscal-aparats';
+import ScalesPrinters from './docs/params/scales-printers';
+import AddUser from './docs/users/add-user';
+import ChangePassword from './docs/users/change-password';
+import Permissions from './docs/users/permissions';
+import Realisation from './docs/realisation';
+import CancelationWriteOff from './docs/write-off/cancellation-write-off';
+import WriteOff from './docs/write-off/write-off';
 
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -91,7 +99,7 @@ const Documentations = () => {
       case '15':
         return <Return />;
       case '16':
-        return <ReturnManual/>;
+        return <ReturnManual />;
       case '17':
         return <Supplier />;
       case '18':
@@ -107,21 +115,21 @@ const Documentations = () => {
       case '23':
         return <ReportsRemainings />;
       case '24':
-        return <div>სასწორები</div>;
+        return <TerminalsFiscalAparats />;
       case '25':
-        return <div>პრინტერები</div>;
+        return <ScalesPrinters />;
       case '26':
-        return <div>მომხმარებლის შექმნა</div>;
+        return <AddUser />;
       case '27':
-        return <div>პაროლის შეცვლა</div>;
+        return <ChangePassword />;
       case '28':
-        return <div>უფლებები</div>;
+        return <Permissions />;
       case '29':
-        return <div>რეალიზაცია</div>;
+        return <Realisation />;
       case '30':
-        return <div>ჩამოწერა</div>;
+        return <WriteOff />;
       case '31':
-        return <div>ჩამოწერის გაუქმება</div>;
+        return <CancelationWriteOff />;
       default:
         return <div>აირჩიე ელემენტი მენიუდან</div>;
     }
@@ -195,8 +203,8 @@ const Documentations = () => {
           </SubMenu>
 
           <SubMenu key="sub7" icon={<SettingOutlined />} title="პარამეტრები" className="mb-6">
-            <Menu.Item key="24">სასწორები</Menu.Item>
-            <Menu.Item key="25">პრინტერები</Menu.Item>
+            <Menu.Item key="24">MAIN / CONFIG პარამეტრები</Menu.Item>
+            <Menu.Item key="25">SCALES / PRINTERS პარამეტრები</Menu.Item>
           </SubMenu>
 
           <SubMenu key="sub8" icon={<UserAddOutlined />} title="მომხმარებელი" className="mb-6">

@@ -17,7 +17,7 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/submit', {
+      const response = await fetch('https://megaplus.com.ge/email_api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
