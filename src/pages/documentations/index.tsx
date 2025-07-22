@@ -55,16 +55,21 @@ const Documentations = () => {
   const [activeKey, setActiveKey] = useState('1');
   const [isDark] = useAtom(darkThemeAtom);
 
-  useEffect(() => {
-    const savedKey = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (savedKey) {
-      setActiveKey(savedKey);
-    }
-  }, []);
+useEffect(() => {
+  const savedKey = sessionStorage.getItem(LOCAL_STORAGE_KEY);
+  if (savedKey) {
+    setActiveKey(savedKey);
+  }
+}, []);
 
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, activeKey);
-  }, [activeKey]);
+useEffect(() => {
+  sessionStorage.setItem(LOCAL_STORAGE_KEY, activeKey);
+
+  const contentElement = document.querySelector('.content-scrollable');
+  if (contentElement) {
+    contentElement.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}, [activeKey]);
 
   const renderContent = () => {
     switch (activeKey) {
@@ -225,7 +230,7 @@ const Documentations = () => {
       </Sider>
 
       <Layout className="pl-6">
-        <Content className="custom-scrollbar max-h-[calc(100vh-60px)] overflow-y-auto !bg-white !px-8 pt-[90px] !pb-24 dark:!bg-[var(--dark-light-blue)] dark:!text-[var(--white-gray)]">
+        <Content className="content-scrollable max-h-[calc(100vh-60px)] overflow-y-auto !bg-white !px-8 pt-[90px] !pb-24 dark:!bg-[var(--dark-light-blue)] dark:!text-[var(--white-gray)]">
           {renderContent()}
         </Content>
       </Layout>

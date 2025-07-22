@@ -12,7 +12,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   try {
-    const response = await fetch('https://megaplus.com.ge/email_api', {
+    const response = await fetch('https://megaplus.com.ge/email_api/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
