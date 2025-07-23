@@ -6,16 +6,17 @@ import ListItem from './components/list-item';
 import H2Title from '@/utils/h2title';
 
 
-const AboutData: string[] = [
-  'lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color lorem ipsum dolor molor color',
-  'მიღება',
-  'lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
-  'lorem ipsum dolor molor color',
+const AboutData = [
+  { name: 'რეალიზაცია', link: 'https://www.youtube.com/watch?v=70z7lGud-yI&ab_channel=MEGAPLIUS' },
+  { name: 'შესყიდვები RS-ის მეშვეობით', link: 'https://www.youtube.com/watch?v=TEA4kk8HIPM&ab_channel=MEGAPLIUS' },
+  { name: 'დაბრუნება RS-ის მეშვეობით', link: 'https://www.youtube.com/watch?v=BCs1Z434H3Y&ab_channel=MEGAPLIUS' },
+  { name: 'ინვენტარიზაცია', link: '' },
+  { name: 'პროდუქციის ჩამოწერა', link: '' },
+  { name: 'სალაროს მართვა', link: '' },
+  { name: 'ნაშთების მართვა', link: '' },
+  { name: 'კალკულაცია', link: '' },
 ];
+
 
 const Capabilities = () => {
   const { t } = useTranslation('home');
@@ -30,8 +31,8 @@ const Capabilities = () => {
         <H2Title title={t('capabilities-title')} />
         <Text />
         <div className="!mt-10 dark:text-[var(--white-gray)]">
-          {AboutData.map((text, index) => (
-            <ListItem key={index} text={text} />
+          {AboutData.map((item, index) => (
+            <ListItem key={index} item={item} />
           ))}
         </div>
         <div className="!mt-12 h-[1px] bg-red-200"></div>

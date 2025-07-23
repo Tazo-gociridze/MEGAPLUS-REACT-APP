@@ -6,9 +6,15 @@ const Hero = () => {
   const { showImage, decorationRef } = useHeroLogic();
 
   return (
-    <div className="relative !mt-28 h-[700px] w-full rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
-      <TypingText />
-      <div className={`hero-image xl:!w-[45rem] xl:!h-[35rem] absolute xl:top-30 right-0 ${showImage ? 'visible' : ''}`}></div>
+    <div className="hero-section relative !mt-28 rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
+        <TypingText/>
+      <div>
+        <div
+          className={`hero-image xl:bottom-[10px] xl:right-0 xl:!h-[35rem] xl:!w-[45rem] ${showImage ? 'visible' : ''}`}
+        ></div>
+        <div className="hero-demo-app-pc">
+        </div>
+      </div>
       <Decoration decorationRef={decorationRef} />
     </div>
   );

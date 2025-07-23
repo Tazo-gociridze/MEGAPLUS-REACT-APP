@@ -9,7 +9,7 @@ const useHeroLogic = () => {
     if (!el) return;
 
     setTimeout(() => {
-      el.style.width = '60%';
+      el.style.width = '100%';
       setTimeout(() => {
         setShowImage(true);
       }, 800);

@@ -53,7 +53,7 @@ export const docItems = [
     src: 'https://megaplus.vercel.app/assets/images/docs/action-img.png',
     width: 110,
     height: 50,
-    text: `პროდუქცია არის აქციაში. აქცია შეიძლება იყოს მომწოდებლის , კარფურის , ან ჩვენი შექმნილი აქცია. 
+    text: `პროდუქცია არის აქციაში. აქცია შეიძლება იყოს მომწოდებლის, ან ჩვენი შექმნილი აქცია. 
            რაც შეგვიძლია გავარჩიოთ კომენტარის საშუალებით.`,
   },
   {
@@ -72,14 +72,14 @@ export const docItems = [
     src: 'https://megaplus.vercel.app/assets/images/docs/carfur-new-action.png',
     width: 110,
     height: 50,
-    text: `ახალი რეკომენდაცია გასაყიდ ფასზე კარფურისგან. რეკომენდირებული ფასი შეიცვალა.`,
+    text: `ახალი რეკომენდაცია გასაყიდ ფასზე. რეკომენდირებული ფასი შეიცვალა.`,
   },
   {
     src: 'https://megaplus.vercel.app/assets/images/docs/auto-img.png',
     width: 120,
     height: 50,
-    text: `პროდუქციას ავტომატურად შეეცვალა გასაყიდი ფასი და დაედო კარფურის რეკომენდირებული ფასი. 
-           ეს ხდება რა თქმა უნდა იმ შემთხვევაში თუ კარფურის რეკომენდირებულ ფასებს ვიყენებთ.`,
+    text: `პროდუქციას ავტომატურად შეეცვალა გასაყიდი ფასი და დაედო რეკომენდირებული ფასი. 
+           ეს ხდება რა თქმა უნდა იმ შემთხვევაში თუ რეკომენდირებულ ფასებს ვიყენებთ.`,
   },
   {
     src: 'https://megaplus.vercel.app/assets/images/docs/change-price.png',
@@ -94,7 +94,7 @@ export const docItems = [
   },
   {
     src: 'https://megaplus.vercel.app/assets/images/docs/ad-price.png',
-    text: `სარეალიზაციო ფასი რომელიც რეკომენდირებულია კარფურისაგან. როგორც ვიცით იოლის ფრენჩაიზის შემთხვევაში`,
+    text: `სარეალიზაციო ფასი რომელიც რეკომენდირებულია. როგორც ვიცით იოლის ფრენჩაიზის შემთხვევაში`,
   },
   {
     src: 'https://megaplus.vercel.app/assets/images/docs/parcantage-img.png',

@@ -8,32 +8,39 @@ const Contacts = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch('https://megaplus.com.ge/email_api/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, phone }),
-    });
+    try {
+      const response = await fetch('https://megaplus.com.ge/email_api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone }),
+      });
 
-    const result = await response.text();
-    setMessage(result);
-  } catch (err) {
-    console.error(err);
-    setMessage('დაფიქსირდა შეცდომა. სცადე ხელახლა.');
-  }
-};
+      const result = await response.text();
+
+      if (!response.ok) {
+        console.error('Server returned an error:', response.status, result);
+        setMessage('დაფიქსირდა შეცდომა. სცადე ხელახლა.');
+        return;
+      }
+
+      setMessage(result);
+    } catch (err) {
+      console.error('Network error:', err);
+      setMessage('მიმართეთ ქსელის ადმინისტრატორს ხარვეზის აღმოსაფხვრელად.');
+    }
+  };
 
   return (
     <div className="fixed-width flex h-[100vh] w-full items-center">
       <div className="grid w-full grid-cols-2 overflow-hidden rounded-2xl border-b-8 border-red-500 bg-white dark:bg-[var(--dark-light-blue)] dark:text-white">
         <div className="!pb-15">
           <div className="flex items-start justify-between">
-            <H2Title className="!px-10 text-xl dark:text-[]" title="Contact us" />
+            <H2Title className="dark:text-[] !px-10 text-xl" title="Contact us" />
           </div>
           <div className="!mt-10 flex justify-between !px-9">
             <div className="flex flex-col gap-y-6 *:flex *:items-center *:gap-x-5 *:text-xl">
@@ -62,16 +69,31 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <span>წერეთლის გამზირი, №116</span>
               </div>
             </div>
-            <div className="flex flex-col justify-between text-4xl  *:flex *:h-[80px] *:w-[80px] *:cursor-pointer *:items-center *:justify-center *:rounded-2xl *:border-4 *:border-red-500 *:transition-all *:duration-300 *:hover:scale-110 *:hover:rotate-3 *:hover:shadow-xl">
-              <div className="text-blue-600 hover:bg-blue-600 hover:text-white">
+            <div className="flex flex-col justify-between text-4xl *:flex *:h-[80px] *:w-[80px] *:cursor-pointer *:items-center *:justify-center *:rounded-2xl *:border-4 *:border-red-500 *:transition-all *:duration-300 *:hover:scale-110 *:hover:rotate-3 *:hover:shadow-xl">
+              <a
+                href="https://www.facebook.com/MEGAPLUS.GE"
+                className="text-blue-600 hover:bg-blue-600 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
-              </div>
-              <div className="text-red-600 hover:bg-red-600 hover:text-white">
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCFHXhna5JW6MC-QIriJagLw"
+                className="text-red-600 hover:bg-red-600 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaYoutube />
-              </div>
-              <div className="text-blue-400 hover:bg-blue-400 hover:text-white">
+              </a>
+              <a
+                href="https://www.linkedin.com/company/megaplus-retail/"
+                className="text-blue-400 hover:bg-blue-400 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedinIn />
-              </div>
+              </a>
             </div>
           </div>
           <div className="!mt-10 h-[1px] w-full bg-[#a598983a]"></div>
@@ -97,13 +119,11 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
             <button
               type="submit"
-              className="!mt-6 rounded-4xl cursor-pointer bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md"
+              className="!mt-6 cursor-pointer rounded-4xl bg-red-500 !px-6 !py-2 font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md"
             >
               Submit
             </button>
-            {message && (
-              <p className="mt-4 text-green-600 dark:text-white">{message}</p>
-            )}
+            {message && <p className="mt-4 text-green-600 dark:text-white">{message}</p>}
           </form>
         </div>
         <div className="h-full w-full overflow-hidden dark:shadow-sm">

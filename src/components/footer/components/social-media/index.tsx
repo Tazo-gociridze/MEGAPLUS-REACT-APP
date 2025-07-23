@@ -18,7 +18,7 @@ const SocialMedia = () => {
         </li>
 
         <li className="cursor-pointer">
-          <a href="">
+          <a href="https://www.linkedin.com/company/megaplus-retail/" target="_blank" rel="noopener noreferrer">
             <IoLogoLinkedin className="text-blue-300" />
           </a>
         </li>

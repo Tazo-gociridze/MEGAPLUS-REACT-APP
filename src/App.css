@@ -1,4 +1,3 @@
-
 html {
   font-size: 16px;
 }
@@ -7,7 +6,7 @@ html {
   padding: 0 13rem !important;
 }
 
-strong{
+strong {
   font-weight: 700 !important;
 }
 
@@ -38,8 +37,16 @@ strong{
   transform-origin: right;
 }
 
+.hero-section {
+  height: 43.75rem;
+  width: 100%;
+}
+
 .hero-image {
-  width: 50rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40rem;
   height: 100%;
   background-image: url(./images/home/hero-image.png);
   background-size: cover;
@@ -57,26 +64,40 @@ strong{
   width: 0;
   height: 300px;
   position: absolute;
-  top: 120px;
+  bottom: 150px;
   right: 0;
   z-index: 0;
-  border-top-left-radius: 200px;
-  border-bottom-left-radius: 200px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   border-right: 5px solid rgba(255, 0, 0, 0.432);
+  border-left: 5px solid rgba(255, 0, 0, 0.048);
   transition: width 0.8s ease;
 }
 
-.sidebar-activator{
+.hero-demo-app-pc {
+  width: 37rem;
+  height: 30rem;
+  z-index: 10;
+  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url(/src/images/home/pc.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.sidebar-activator {
   display: none;
 }
 
-.about-image{
+.about-image {
   background-image: url(./images/about/aboutUs.jpg);
   background-position: center;
   background-size: cover;
 }
 
-.about-image-2{
+.about-image-2 {
   background-image: url(./images/about/aboutUs-2.jpg);
   background-position: center;
   background-size: cover;
@@ -92,7 +113,7 @@ strong{
 
 
 .swiper-button-prev {
-  left: -0px !important; 
+  left: -0px !important;
 }
 
 .swiper-button-next {
@@ -130,25 +151,27 @@ strong{
 
 .fancy-order-button {
   padding: 0.5rem 2.5rem;
-  background-color: #ef4444; 
-  color: white;  
-  border-radius: 1.5rem;     
+  background-color: #ef4444;
+  color: white;
+  border-radius: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border: none;
 }
 
 .fancy-order-button:hover {
-  background-color: #dc2626; 
-  transform: translateY(-1px); 
+  background-color: #dc2626;
+  transform: translateY(-1px);
 }
 
 .fancy-order-button:active {
-  transform: scale(0.97); 
+  transform: scale(0.97);
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
 
@@ -158,7 +181,7 @@ strong{
 }
 
 
-@media (max-width: 1540px) {
+@media (max-width: 1581px) {
   html {
     font-size: 14px;
   }
@@ -166,11 +189,28 @@ strong{
   .fixed-width {
     padding: 0 8rem !important;
   }
+
+  .hero-image {
+    width: 35rem;
+  }
+}
+
+@media(max-width: 1332px) {
+
+  .hero-image {
+    width: 40rem;
+    height: 32rem;
+  }
+
 }
 
 @media (max-width: 1215px) {
   html {
     font-size: 12px;
+  }
+
+  .hero-section {
+    height: 52rem;
   }
 
   .fixed-width {
@@ -188,28 +228,55 @@ strong{
   }
 }
 
- @media (max-width: 860px) {
-  html{
+@media (max-width: 914px) {
+  html {
+    font-size: 10.5px;
+  }
+
+  .fixed-width {
+    padding: 0 4rem !important;
+  }
+}
+
+@media (max-width: 860px) {
+  html {
     font-size: 15px;
   }
+
+  .hero-section{
+    height: 40rem;
+  }
+  
+  .hero-demo-app-pc {
+    position: none;
+    width: 100%;
+    height: 30rem;
+ 
+}
+
+  .hero-image {
+     display: none;
+  }
+
   .fixed-width {
     padding: 0 2rem !important;
   }
 
-  .sidebar-activator{
+  .sidebar-activator {
     display: block;
   }
 
-  .top-header{
+  .top-header {
     display: none;
   }
-  .header-navbar{
-    display: none; 
-}
+
+  .header-navbar {
+    display: none;
+  }
 }
 
- @media (max-width: 500px) {
-  html{
+@media (max-width: 500px) {
+  html {
     font-size: 12px;
   }
 }

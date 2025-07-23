@@ -1,7 +1,6 @@
 import { Modal } from 'antd';
-import { useState, useRef, type FC } from 'react';
+import { useState, type FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 interface ContactModalPropsType {
   isModalOpen: boolean;
@@ -13,32 +12,26 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      const token = await recaptchaRef.current?.executeAsync();
-      recaptchaRef.current?.reset();
-
-      const response = await fetch('http://localhost:5000/submit', {
+      const response = await fetch('https://localhost:5000/app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, phone, recaptcha_token: token }),
+        body: JSON.stringify({ name, phone }),
       });
 
       const result = await response.text();
       setMessage(result);
-      console.log(result)
     } catch (err) {
       console.error(err);
       setMessage('დაფიქსირდა შეცდომა. სცადე ხელახლა.');
     }
   };
-
   return (
     <Modal open={isModalOpen} onCancel={handleCancel} footer={null} centered>
       <div className="space-y-4 !p-5 text-lg text-gray-800">
@@ -46,13 +39,13 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
           <span className="!mb">{t('tariffs-modal-title')}</span>
           <div className="!mt-6 !mb-4 flex items-center gap-x-4">
             📞
-            <a href="tel:+995322500601" className="!text-red-600 hover:!underline">
+            <a href="tel:+995599123456" className="!text-red-600 hover:!underline">
               +995 322-500-601
             </a>
           </div>
           <div className="!mt-6 !mb-4 flex items-center gap-x-4">
             📞
-            <a href="tel:+995322344425" className="!text-red-600 hover:!underline">
+            <a href="tel:+995599123456" className="!text-red-600 hover:!underline">
               +995 322-344-425
             </a>
           </div>
@@ -64,7 +57,7 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
           </div>
         </div>
         <form onSubmit={handleSubmit} className="w-full">
-          <p className="!mt-10 text-gray-600 dark:text-white text-sm">
+          <p className="!mt-10 text-gray-600 text-sm">
             დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით
           </p>
           <div className="!mt-5 grid grid-cols-1 gap-y-4 *:rounded-4xl *:border-[1px] *:border-[#665e5e49] *:!px-4 *:!py-2 text-sm">
@@ -89,11 +82,6 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
           >
             Submit
           </button>
-          <ReCAPTCHA
-            sitekey="6Lc8OosrAAAAANA7bocBHV9rffIHvS-4bC36lR8X"
-            size="invisible"
-            ref={recaptchaRef}
-          />
           {message && <p className="mt-4 text-green-600 dark:text-white">{message}</p>}
         </form>
       </div>

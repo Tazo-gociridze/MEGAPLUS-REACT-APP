@@ -63,7 +63,7 @@ export const productFields:DocumentFieldsTypes[]  = [
   },
   {
     title: "დასახელება",
-    description: "კარფურის მიერ მითითებული პროდუქციის დასახელება.",
+    description: "პროდუქციის დასახელება.",
   },
   {
     title: "ერთეული",
@@ -79,7 +79,7 @@ export const productFields:DocumentFieldsTypes[]  = [
   },
   {
     title: "ფასი",
-    description: "ხელშეკრულებაში რა ფასად ზის პროდუქცია. უთითებს კარფური.",
+    description: "ხელშეკრულებაში რა ფასად ზის პროდუქცია.",
   },
   {
     title: "ჯამი",
