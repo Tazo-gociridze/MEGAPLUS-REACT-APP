@@ -38,7 +38,7 @@ const AddUser = () => {
 
       <div className="!mt-8">
         <p>ავირჩიოთ ობიექტი რომელ ობიექტზეც ვამატებთ მოცემულ იუზერს და ავირჩიოთ დონე:</p>
-        <ul className='list-disc !pl-5 *:!mt-3 !my-4'>
+        <ul className="!my-4 list-disc !pl-5 *:!mt-3">
           {userRoles.map((item, index) => (
             <li key={index}>
               <strong>{item.title}</strong> - {item.description}

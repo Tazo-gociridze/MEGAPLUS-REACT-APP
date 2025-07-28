@@ -82,7 +82,7 @@ strong {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: url(/src/images/home/pc.png);
+  background-image: url(/public/img/pc.png);
   background-size: cover;
   cursor: pointer;
 }
@@ -91,10 +91,18 @@ strong {
   display: none;
 }
 
+.about-section {
+  display: grid;
+}
+
 .about-image {
   background-image: url(./images/about/aboutUs.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.capabilities-section {
+  display: grid;
 }
 
 .about-image-2 {
@@ -102,6 +110,7 @@ strong {
   background-position: center;
   background-size: cover;
 }
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -111,7 +120,6 @@ strong {
   background-color: #f13232af;
 }
 
-
 .swiper-button-prev {
   left: -0px !important;
 }
@@ -119,7 +127,6 @@ strong {
 .swiper-button-next {
   right: -0px !important;
 }
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -148,14 +155,15 @@ strong {
   background: #e11d48;
 }
 
-
 .fancy-order-button {
   padding: 0.5rem 2.5rem;
   background-color: #ef4444;
   color: white;
   border-radius: 1.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   border: none;
 }
 
@@ -180,7 +188,6 @@ strong {
   }
 }
 
-
 @media (max-width: 1581px) {
   html {
     font-size: 14px;
@@ -195,13 +202,11 @@ strong {
   }
 }
 
-@media(max-width: 1332px) {
-
+@media (max-width: 1332px) {
   .hero-image {
     width: 40rem;
     height: 32rem;
   }
-
 }
 
 @media (max-width: 1215px) {
@@ -213,6 +218,10 @@ strong {
     height: 52rem;
   }
 
+  .list-item-decor {
+    margin-top: 0px !important;
+  }
+
   .fixed-width {
     padding: 0 8rem !important;
   }
@@ -221,6 +230,10 @@ strong {
 @media (max-width: 1040px) {
   html {
     font-size: 11px;
+  }
+
+  .tariff {
+    padding: 0px !important;
   }
 
   .fixed-width {
@@ -243,19 +256,59 @@ strong {
     font-size: 15px;
   }
 
-  .hero-section{
+  .tariff-price {
+    font-size: 1.2rem;
+  }
+
+  .tariff-dropdown-title {
+    font-size: 0.8rem;
+  }
+
+  .main-dropdown-arrow {
+    font-size: 0.7rem;
+  }
+
+  .fancy-order-button {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+
+  .tariff-feature {
+    font-size: 0.6rem;
+  }
+
+  .tariff-name {
+    font-size: 1rem;
+  }
+
+  .hero-section {
     height: 40rem;
   }
-  
+
   .hero-demo-app-pc {
     position: none;
     width: 100%;
     height: 30rem;
- 
-}
+  }
 
   .hero-image {
-     display: none;
+    display: none;
+  }
+
+  .about-section {
+    display: block;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .capabilities-section {
+    display: block;
+  }
+
+  .about-image-2 {
+    display: none;
   }
 
   .fixed-width {
@@ -275,8 +328,45 @@ strong {
   }
 }
 
+
+@media (max-width: 630px) {
+  html {
+    font-size: 11px;
+  }
+
+  .tariff-price {
+    font-size: 2.2rem;
+  }
+
+  .tariff-dropdown-title {
+    font-size: 1.7rem;
+  }
+
+  .main-dropdown-arrow {
+    font-size: 1.7rem;
+  }
+
+  .fancy-order-button {
+    font-size: 1.3rem;
+    padding: 8px 15px;
+  }
+
+  .tariff-feature {
+    font-size: 1.2rem;
+  }
+
+  .tariff-name {
+    font-size: 2rem;
+  }
+}
+
+
 @media (max-width: 500px) {
   html {
+    font-size: 10px;
+  }
+
+  .tariff-feature {
     font-size: 12px;
   }
 }

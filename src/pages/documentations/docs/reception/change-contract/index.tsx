@@ -12,7 +12,7 @@ const ChangeContract = () => {
         გადავიტანოთ ზედნადები ავტორიზაციებში, გადავიდეთ „დოკუმენტები“ შემდეგ „ჩასწორება“ ბოლოს
         დოკუმენტის ჩასწორება
       </p>
-      <span className='flex items-center gap-x-4 !mt-6'>
+      <span className="!mt-6 flex items-center gap-x-4">
         <Image src="https://megaplus.vercel.app/assets/images/docs/add-doc.png" preview={false} />
         <span>ხელშეკრულებების გამოტანა</span>
       </span>

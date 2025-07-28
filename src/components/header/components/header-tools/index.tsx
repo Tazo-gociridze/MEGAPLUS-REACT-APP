@@ -13,12 +13,11 @@ const HeaderTools: FC<HeaderToolsProps> = ({ setSidebar }) => {
 
   return (
     <div className="flex items-center justify-between gap-x-10 text-xl text-[var(--dark-blue)] *:cursor-pointer dark:text-[var(--white-gray)]">
-         <ChangeTheme dark={dark} setDarkMode={setDarkMode}/>
-         <ChangeLang items={items} lang={lang}  flag={flag}/>
-         <SidebarActivator setSidebar={setSidebar}/>
+      <ChangeTheme dark={dark} setDarkMode={setDarkMode} />
+      <ChangeLang items={items} lang={lang} flag={flag} />
+      <SidebarActivator setSidebar={setSidebar} />
     </div>
   );
 };
 
 export default HeaderTools;
-

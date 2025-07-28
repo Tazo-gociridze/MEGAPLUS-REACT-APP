@@ -7,8 +7,8 @@ const ReportsSuppliers = () => {
     <div>
       <H2Title className="!mb-6 text-xl" title="რეპორტები / მომწოდებლები" />
       <Image
-      height={'90%'}
-      width={'90%'}
+        height={'90%'}
+        width={'90%'}
         src="https://megaplus.vercel.app/assets/images/docs/reports-reports-tab.png"
         preview={false}
       />

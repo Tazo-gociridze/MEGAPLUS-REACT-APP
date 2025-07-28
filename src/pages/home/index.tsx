@@ -9,7 +9,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <VisualOfProgram />
-      <Tariffs/>
+      <Tariffs />
     </main>
   );
 };

@@ -142,17 +142,22 @@ const Payments = () => {
       </div>
 
       <div>
-        <p className='!mt-12 !mb-3'>დავაჭიროთ გადახდას ავირჩიოთ გადახდის თარიღი და გადახდა დაფიქსირებულია. მომწოდებელზე როგორც
-          ბალანსიდან ასევე დავალიანებიდან გამოაკლდება ეს თანხა.</p>
+        <p className="!mt-12 !mb-3">
+          დავაჭიროთ გადახდას ავირჩიოთ გადახდის თარიღი და გადახდა დაფიქსირებულია. მომწოდებელზე როგორც
+          ბალანსიდან ასევე დავალიანებიდან გამოაკლდება ეს თანხა.
+        </p>
         <Image
           src="https://megaplus.vercel.app/assets/images/docs/suppliers-small-table.png"
           preview={false}
         />
       </div>
-<div>
-        <p className='!mt-6 !mb-2'>როგორც ვხედავთ გადახდა დაფიქსირდა და დავალიანებაში გამოაკლდა.</p>
-      <Image src='https://megaplus.vercel.app/assets/images/docs/suppliers-last-picture.png' preview={false}/>
-</div>
+      <div>
+        <p className="!mt-6 !mb-2">როგორც ვხედავთ გადახდა დაფიქსირდა და დავალიანებაში გამოაკლდა.</p>
+        <Image
+          src="https://megaplus.vercel.app/assets/images/docs/suppliers-last-picture.png"
+          preview={false}
+        />
+      </div>
     </div>
   );
 };

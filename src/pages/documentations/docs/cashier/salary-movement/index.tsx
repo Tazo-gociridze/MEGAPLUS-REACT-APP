@@ -4,8 +4,8 @@ import { Image } from 'antd';
 const SalaryMovement = () => {
   return (
     <div>
-      <H2Title className="text-xl " title="სალაროს მოძრაობა" />
-      <p className='!my-6'>
+      <H2Title className="text-xl" title="სალაროს მოძრაობა" />
+      <p className="!my-6">
         სალაროს მოძრაობის ფანჯარა გამოიყენება მენეჯერისა და მოლარეს შორის თანხის მოძრაობის
         დასაფიქსირებლად. აქ უნდა დავაფიქსიროთ ის თანხა რასაც მივცემთ ჩვენ მოლარეს, და ის თანხა რასაც
         მოლარე დაგვიბრუნებს. ეს რეპორტი, რომ სწორი იყოს ყოველდღე უნდა დავაფიქსიროთ თანხის მოძრაობა.
@@ -16,7 +16,10 @@ const SalaryMovement = () => {
         დავაჭიროთ „თანხის მიბარება“. დაფიქსირებული მოძრაობის ამოშლა შესაძლებელია, უნდა ავირჩიოთ და
         დავაჭიროთ „DELETE“ღილაკს კლავიატურაზე. წაშლილების გამოჩენა თუ გვინდა მოვნიშნოთ წაშლილები.
       </p>
-      <Image src='https://megaplus.vercel.app/assets/images/docs/cashier-saved.png' preview={false}/>
+      <Image
+        src="https://megaplus.vercel.app/assets/images/docs/cashier-saved.png"
+        preview={false}
+      />
     </div>
   );
 };

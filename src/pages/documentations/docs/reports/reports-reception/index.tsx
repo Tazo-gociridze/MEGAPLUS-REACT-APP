@@ -10,15 +10,18 @@ const ReportsReception = () => {
         src="https://megaplus.vercel.app/assets/images/docs/reports-recieve.png"
         preview={false}
       />
-      <ul className='list-disc !pl-5 *:!mt-3'>
+      <ul className="list-disc !pl-5 *:!mt-3">
         {filters.map((filter, index) => (
           <li key={index}>
             <strong>{filter.title}</strong> - {filter.description}
           </li>
         ))}
       </ul>
-      <p className='!mt-4 !mb-1'>მიღებების ნახვა ზედნადებების მიხედვით:</p>
-      <Image src='https://megaplus.vercel.app/assets/images/docs/reports-according-btn.png' preview={false}/>
+      <p className="!mt-4 !mb-1">მიღებების ნახვა ზედნადებების მიხედვით:</p>
+      <Image
+        src="https://megaplus.vercel.app/assets/images/docs/reports-according-btn.png"
+        preview={false}
+      />
     </div>
   );
 };

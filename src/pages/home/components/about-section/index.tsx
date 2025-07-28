@@ -3,7 +3,7 @@ import Capabilities from './components/capabilities';
 
 const AboutSection = () => {
   return (
-    <section className='!mb-24'>
+    <section className="!mb-24">
       <AboutCompany />
       <Capabilities />
     </section>

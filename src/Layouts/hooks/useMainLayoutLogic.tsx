@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 const useMainLayoutLogic = () => {
-      const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const scrollToTop = () => {
@@ -20,8 +20,8 @@ const useMainLayoutLogic = () => {
     sidebar,
     setSidebar,
     showScrollTop,
-    scrollToTop
-  }
-}
+    scrollToTop,
+  };
+};
 
-export default useMainLayoutLogic
+export default useMainLayoutLogic;

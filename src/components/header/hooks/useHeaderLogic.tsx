@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 
-
 export interface HeaderProps {
   setSidebar: (value: boolean) => void;
 }
 
-const useHeaderLogic = (setSidebar : (value: boolean) => void) => {
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+const useHeaderLogic = (setSidebar: (value: boolean) => void) => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isWideScreen, setIsWideScreen] = useState<boolean>(window.innerWidth > 860);
 
   useEffect(() => {
@@ -41,8 +40,8 @@ const useHeaderLogic = (setSidebar : (value: boolean) => void) => {
     };
   }, [isWideScreen, setSidebar]);
   return {
-isScrolled
-  }
-}
+    isScrolled,
+  };
+};
 
-export default useHeaderLogic
+export default useHeaderLogic;

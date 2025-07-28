@@ -11,7 +11,10 @@ const Discounts = () => {
         და შემდეგ 18:00 ზე გახდეს ისევ 10 ლარი. დავაჭიროთ პროდუქციის სრული თვით ღირებულებისგან
         მარჯვნივ არსებულ მწვანე ისარს.
       </p>
-      <Image preview={false} src="https://megaplus.vercel.app/assets/images/docs/calculation-selfPrice.png" />
+      <Image
+        preview={false}
+        src="https://megaplus.vercel.app/assets/images/docs/calculation-selfPrice.png"
+      />
       <div className="!my-4">მწვანე ისარზე დაჭერის შემდეგ გამოგვიტანს შემდეგ ფანჯარას:</div>
 
       <div className="grid grid-cols-5 gap-x-6">
@@ -56,7 +59,7 @@ const Discounts = () => {
         <span>
           ხელით შექმნილი აქცია ავტომატურად აქ უქმდება, ამიტომ, ხელითვე უნდა გავაუქმოთ. გასაუქმებლად
           ფასდაკლებამდე ფასში ვწერთ 0 -ს , ხოლო ფასში სარეალიზაციო ფასს, ვაჭერთ ჩასწორებას.
-          <div className='flex items-center gap-x-4'>
+          <div className="flex items-center gap-x-4">
             <span> პროდუქციას სტატუსის ზოლში ჩაუჯდება აქციის მაჩვენებელი ნიშანი :</span>
             <span>
               <Image
@@ -67,10 +70,13 @@ const Discounts = () => {
               />
             </span>
           </div>
-
-          <div className='!mt-14'>
+          <div className="!mt-14">
             <div>სააქციო ფასის ამობეჭდვის დროს ფას მაჩვენებელი ამოვა შემდეგი ფორმატით :</div>
-            <Image className='!mt-14' preview={false} src='https://megaplus.vercel.app/assets/images/docs/priceControl-result.png'/>
+            <Image
+              className="!mt-14"
+              preview={false}
+              src="https://megaplus.vercel.app/assets/images/docs/priceControl-result.png"
+            />
           </div>
         </span>
       </div>

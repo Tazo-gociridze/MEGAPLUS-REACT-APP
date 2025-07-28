@@ -177,7 +177,10 @@ const Realisation = () => {
             src="https://megaplus.vercel.app/assets/images/docs/realization-payment-method.png"
             preview={false}
           />
-          <p className='!mt-4'>დადასტურების შემთხვევაში ამოვა ჩეკი, სხვა შემთხვევაში არ გადაიტანს პროგრამა რეალიზაციაში.</p>
+          <p className="!mt-4">
+            დადასტურების შემთხვევაში ამოვა ჩეკი, სხვა შემთხვევაში არ გადაიტანს პროგრამა
+            რეალიზაციაში.
+          </p>
         </div>
       </div>
     </div>

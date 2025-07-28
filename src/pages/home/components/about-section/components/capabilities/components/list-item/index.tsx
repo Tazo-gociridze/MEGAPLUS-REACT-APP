@@ -1,15 +1,19 @@
-import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineLike } from 'react-icons/ai';
 
-
-const ListItem = ({ item }: { item: { name: string, link: string } }) => {
+const ListItem = ({ item }: { item: { name: string; link: string } }) => {
   return (
-    <div className="flex items-start justify-between gap-x-10 !mb-6">
-      <div className="flex gap-x-2 justify-between">
-        <div className="h-[1px] w-[20px] bg-red-500 dark:bg-white !mt-3"></div>
-        <a href={item.link} className={`${item.link ? "text-red-600 hover:underline hover:text-red-600 dark:text-red-300" : "cursor-auto"} w-[97%] `}>{item.name}</a>
+    <div className="!mb-6 flex items-start justify-between gap-x-10">
+      <div className="flex items-start justify-between gap-x-2">
+        <div className="list-item-decor !mt-3 h-[1px] w-[20px] bg-red-500 dark:bg-white"></div>
+        <a
+          href={item.link}
+          className={`w-[97%] !leading-6 text-red-500 hover:text-red-600 hover:underline dark:text-white`}
+        >
+          {item.name}
+        </a>
       </div>
       <div>
-        <AiOutlineLike className="text-4xl text-red-500"/>
+        <AiOutlineLike className="text-4xl text-red-500" />
       </div>
     </div>
   );

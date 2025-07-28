@@ -55,21 +55,21 @@ const Documentations = () => {
   const [activeKey, setActiveKey] = useState('1');
   const [isDark] = useAtom(darkThemeAtom);
 
-useEffect(() => {
-  const savedKey = sessionStorage.getItem(LOCAL_STORAGE_KEY);
-  if (savedKey) {
-    setActiveKey(savedKey);
-  }
-}, []);
+  useEffect(() => {
+    const savedKey = sessionStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedKey) {
+      setActiveKey(savedKey);
+    }
+  }, []);
 
-useEffect(() => {
-  sessionStorage.setItem(LOCAL_STORAGE_KEY, activeKey);
+  useEffect(() => {
+    sessionStorage.setItem(LOCAL_STORAGE_KEY, activeKey);
 
-  const contentElement = document.querySelector('.content-scrollable');
-  if (contentElement) {
-    contentElement.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}, [activeKey]);
+    const contentElement = document.querySelector('.content-scrollable');
+    if (contentElement) {
+      contentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [activeKey]);
 
   const renderContent = () => {
     switch (activeKey) {

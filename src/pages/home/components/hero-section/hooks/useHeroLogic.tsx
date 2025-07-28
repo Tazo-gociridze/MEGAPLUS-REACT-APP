@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 const useHeroLogic = () => {
   const decorationRef = useRef<HTMLDivElement>(null);
@@ -17,8 +17,8 @@ const useHeroLogic = () => {
   }, []);
   return {
     showImage,
-    decorationRef
-  }
-}
+    decorationRef,
+  };
+};
 
-export default useHeroLogic
+export default useHeroLogic;

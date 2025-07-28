@@ -1,7 +1,7 @@
 import H2Title from '@/utils/h2title';
 import { Image } from 'antd';
 
-import { docItems } from './data';
+import { docItems, tasks } from './data';
 
 const InfoAboutProducts = () => {
   return (
@@ -9,11 +9,17 @@ const InfoAboutProducts = () => {
       <div>
         <H2Title className="!mb-6 text-xl" title="ინფორმაცია პროდუქციის შესახებ" />
         <p className="!mb-6">
-          პროდუქციის ფანჯარაში ნაჩვენებია ყველა ის პროდუქცია, რომელიც გვაქვს ფიზიკურად მაღაზიაში.
-          შესაბამისი დასახელებითა და შტრიხკოდებით. ამ ფანჯარაში შესაძლებელია: შევამოწმოთ პროგრამული
-          ნაშთი სასურველ პოზიციაზე, შევქმნათ ახალი ნომენკლატურა, შევცვალოთ ინფორმაცია პროდუქციაზე და
+          პროდუქციის ფანჯარაში ნაჩვენებია ყველა ის ნომეკლატურა(პროდუქცია), რომელიც
+          შექმნილი/რეგისტრირებული გვაქვს პროგრამაში, შესაბამისი დასახელებით და შტრიხკოდებით. <br />{' '}
+          <br /> პროდუქციის ფანჯარაში შესაძლებელია შემდეგი ოპერაციები:
+          <ul className="!mb-6 list-disc !pl-5 *:!mt-4">
+            {tasks.map((task) => (
+              <li key={task.id}><strong>{task.text}</strong> </li>
+            ))}
+          </ul>
           მოდით პირველ რიგში ვნახოთ, რა ინფორმაცია გვხვდება, პროდუქციის ფანჯარაში, ნომენკლატურებზე.
         </p>
+
         <Image src="https://megaplus.vercel.app/assets/images/docs/product-img.png" />
       </div>
 

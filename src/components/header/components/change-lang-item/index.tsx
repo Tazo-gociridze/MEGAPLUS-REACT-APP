@@ -1,13 +1,12 @@
-import type { FC } from "react";
+import type { FC } from 'react';
 
-interface ChangeLangItemProps{
-    changeLang: (lang: string, flag:string) => void,
-    flag: string,
-    lang: string
+interface ChangeLangItemProps {
+  changeLang: (lang: string, flag: string) => void;
+  flag: string;
+  lang: string;
 }
 
-const ChangeLangItem:FC<ChangeLangItemProps> = ({ changeLang, flag, lang }
-) => {
+const ChangeLangItem: FC<ChangeLangItemProps> = ({ changeLang, flag, lang }) => {
   return (
     <span
       onClick={() => changeLang(lang, flag)}

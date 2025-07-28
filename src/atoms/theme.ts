@@ -1,4 +1,3 @@
-
 import { atom } from 'jotai';
 
 const initialDarkValue = localStorage.getItem('darkTheme') === 'true';

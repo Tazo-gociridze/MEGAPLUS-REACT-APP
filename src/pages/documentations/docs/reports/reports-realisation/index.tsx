@@ -48,12 +48,12 @@ const ReportsRealisation = () => {
         />
       </div>
 
-      <div className='!mt-6'>
+      <div className="!mt-6">
         <p>
           პროდუქციის რეალიზაციებში გვხვდება 0 რაოდენობა. ეს არის რეალიზაციაში ამოშლილი პროდუქციები.
         </p>
         <Image
-        className='!my-3'
+          className="!my-3"
           src="https://megaplus.vercel.app/assets/images/docs/reports-sales-part.png"
           preview={false}
         />

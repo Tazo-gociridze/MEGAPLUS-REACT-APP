@@ -9,9 +9,12 @@ interface NavLinkProps {
 const NavLink: FC<NavLinkProps> = ({ name, path }) => {
   const currentPath = useLocation().pathname;
   return (
-    <Link className={currentPath === path ? 'navLink active text-red-600 dark:text-red-500' : 'navLink'} to={path}>
-      <span>{name}</span> 
-      <div className='dark:!bg-white'></div>
+    <Link
+      className={currentPath === path ? 'navLink active text-red-600 dark:text-red-500' : 'navLink'}
+      to={path}
+    >
+      <span>{name}</span>
+      <div className="dark:!bg-white"></div>
     </Link>
   );
 };

@@ -15,14 +15,14 @@ const Price: FC<PricePropsTypes> = ({ toggleAllPanels, tariff, index, activePane
   return (
     <>
       <div className="!mb-6 flex items-center justify-between gap-y-3">
-        <div className="mb-2 text-center text-3xl font-bold text-green-700">{tariff.price}</div>
+        <div className="tariff-price mb-2 text-center text-3xl font-bold text-green-700">{tariff.price}</div>
 
         <div
-          className="cursor-pointer rounded bg-[#ef4444] !p-2 transition hover:opacity-80"
+          className="main-dropdown-arrow cursor-pointer text-2xl rounded bg-[#ef4444] !p-2 transition hover:opacity-80"
           onClick={() => toggleAllPanels(index)}
         >
           <IoIosArrowDown
-            className={`text-2xl text-white transition-transform duration-300 ${
+            className={`main-dropdown-arrow  text-white transition-transform duration-300 ${
               activePanels[index].length === 0 ? '' : 'rotate-180'
             }`}
           />

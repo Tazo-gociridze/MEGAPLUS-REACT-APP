@@ -28,8 +28,8 @@ const ProductsFiltration = () => {
           </p>
           <div className="!mb-4 flex items-center gap-x-6">
             <Image
-            width={200}
-            height={65}
+              width={200}
+              height={65}
               preview={false}
               src="https://megaplus.vercel.app/assets/images/docs/byGroup-img.png"
             />
@@ -37,8 +37,8 @@ const ProductsFiltration = () => {
           </div>
           <div className="flex items-center gap-x-6">
             <Image
-            width={250}
-            height={65}
+              width={250}
+              height={65}
               preview={false}
               src="https://megaplus.vercel.app/assets/images/docs/suppliers-img.png"
             />

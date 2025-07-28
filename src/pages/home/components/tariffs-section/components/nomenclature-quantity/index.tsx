@@ -2,11 +2,11 @@ import { type FC } from 'react';
 import type { Tariff } from '../../tariffs.types';
 import { useTranslation } from 'react-i18next';
 
-const Nomenclature:FC<{tariff: Tariff}> = ({tariff}) => {
-    const {t} = useTranslation("tariffs")
+const Nomenclature: FC<{ tariff: Tariff }> = ({ tariff }) => {
+  const { t } = useTranslation('tariffs');
   return (
     <div className="!mt-10 flex items-center justify-between">
-      <div className="text-md text-center font-medium text-gray-700 dark:text-[var(--white-gray)]">
+      <div className="text-[1.1rem] text-center font-medium text-gray-700 dark:text-[var(--white-gray)]">
         {t('nomenclature-quantity-key')}:
       </div>
 

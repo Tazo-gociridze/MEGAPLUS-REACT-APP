@@ -8,8 +8,9 @@ interface ChangeThemeProps {
 }
 
 const ChangeTheme: FC<ChangeThemeProps> = ({ dark, setDarkMode }) => {
-  return <span onClick={() => setDarkMode(!dark)}>{dark ? <SunOutlined /> : <IoMoonOutline />}</span>;
+  return (
+    <span onClick={() => setDarkMode(!dark)}>{dark ? <SunOutlined /> : <IoMoonOutline />}</span>
+  );
 };
 
 export default ChangeTheme;
-

@@ -42,7 +42,7 @@ const AcceptanceByPurchaseAct = () => {
         src=" https://megaplus.vercel.app/assets/images/docs/doc-numb-rs.png"
         preview={false}
       />
-      <p className='!mt-4'>
+      <p className="!mt-4">
         თუ პროდუქცია არ არის რეგისტრირებული ამ შემთხვევაში შეგვიძლია პროდუქცია შევქმნათ მწვანე
         პლიუსის გამოყენებით. ბოლოს დავაჭიროთ შესრულებას.
       </p>

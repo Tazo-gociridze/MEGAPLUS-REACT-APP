@@ -25,4 +25,3 @@ const ChangeLang: FC<ChangeLangProps> = ({ items, lang, flag }) => {
 };
 
 export default ChangeLang;
-

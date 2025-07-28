@@ -5,7 +5,7 @@ const TypingText = () => {
   const { t, i18n } = useTranslation('home');
   return (
     <div className="flex items-center !p-8 !leading-[40px]">
-      <h1 className="noto-sans-georgian sm:text-[1.2rem] !leading-[45px] md:text-[1.5rem] text-[var(--dark-light-blue)] lg:text-[1.8rem] xl:text-[2rem] font-semibold dark:text-[var(--white-gray)]">
+      <h1 className="noto-sans-georgian !leading-[45px] font-semibold text-[var(--dark-light-blue)] sm:text-[1.2rem] md:text-[1.5rem] lg:text-[1.8rem] xl:text-[2rem] dark:text-[var(--white-gray)]">
         <TypewriterComponent
           key={i18n.language}
           onInit={(typewriter) => {

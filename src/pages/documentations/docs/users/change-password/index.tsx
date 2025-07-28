@@ -16,12 +16,12 @@ const ChangePassword = () => {
           />
         </p>
         <Image
-        className='!my-4'
+          className="!my-4"
           src="https://megaplus.vercel.app/assets/images/docs/users-password-change-input.png"
           preview={false}
         />
         <p>
-          შევიყვანოთ ახალი პაროლი დავამოწმოთ (მეორე ველშიც ვწერთ ახალ პაროლს) და დავაჭიროთ {' '}
+          შევიყვანოთ ახალი პაროლი დავამოწმოთ (მეორე ველშიც ვწერთ ახალ პაროლს) და დავაჭიროთ{' '}
           <Image
             className="inline-block align-middle"
             src="https://megaplus.vercel.app/assets/images/docs/users-password-saved.png"

@@ -36,7 +36,7 @@ const images = [
   'https://megaplus-images.vercel.app/assets/01-B-37h7Tt.png',
   'https://megaplus-images.vercel.app/assets/02-B0_mV5oA.png',
   'https://megaplus-images.vercel.app/assets/04-DccU6nZH.png',
-  'https://megaplus-images.vercel.app/assets/07-Cof3NVUU.png', 
+  'https://megaplus-images.vercel.app/assets/07-Cof3NVUU.png',
   'https://megaplus-images.vercel.app/assets/10-BXIFy2e7.png',
 ];
 
@@ -64,7 +64,6 @@ const VisualOfProgram = () => {
           slidesPerView={2}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-          navigation
           scrollbar={{ draggable: true }}
           coverflowEffect={{
             rotate: 30,
@@ -74,6 +73,7 @@ const VisualOfProgram = () => {
             slideShadows: true,
           }}
           breakpoints={{
+            320: { slidesPerView: 1 },
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
           }}
@@ -82,7 +82,7 @@ const VisualOfProgram = () => {
           {images.map((src, index) => (
             <SwiperSlide key={index}>
               <div style={contentStyle}>
-                <Image src={src} height={"100%"} loading="lazy" />
+                <Image src={src} height={'100%'} loading="lazy" />
               </div>
             </SwiperSlide>
           ))}

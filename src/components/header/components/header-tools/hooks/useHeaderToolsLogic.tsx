@@ -25,15 +25,14 @@ const languageOptions = {
 const useHeaderToolsLogic = () => {
   const [lang, setLang] = useState('ge');
   const [flag, setFlag] = useState(usaflag);
-  const [dark] = useAtom(darkThemeAtom)
- const [, setDark] = useAtom(setDarkThemeAtom);
+  const [dark] = useAtom(darkThemeAtom);
+  const [, setDark] = useAtom(setDarkThemeAtom);
 
-
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
   useEffect(() => {
-   i18n.changeLanguage(lang)
-   //eslint-disable-next-line
-  }, [lang])
+    i18n.changeLanguage(lang);
+    //eslint-disable-next-line
+  }, [lang]);
 
   useEffect(() => {
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);

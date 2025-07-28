@@ -38,13 +38,13 @@ const DropdownContent: FC<DropdownContentPropsTypes> = ({
     >
       {tariff.features.map((feature, i) => (
         <Panel
-          header={<span className="dark:text-[var(--white-gray)]">{feature.title}</span>}
+          header={<span className="tariff-dropdown-title dark:text-[var(--white-gray)] text-[0.9rem]">{feature.title}</span>}
           key={i.toString()}
         >
           {feature.description.map((item) => (
             <p
               key={item.name}
-              className={`!mb-4 text-[15px] ${item.active ? 'text-green-600' : 'text-red-500 line-through'}`}
+              className={`tariff-feature !mb-4 text-[0.937rem] ${item.active ? 'text-green-600' : 'text-red-500 line-through'}`}
             >
               {item.name}
             </p>

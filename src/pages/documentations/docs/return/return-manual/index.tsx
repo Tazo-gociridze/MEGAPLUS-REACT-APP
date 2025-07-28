@@ -1,11 +1,11 @@
-import H2Title from "@/utils/h2title"
+import H2Title from '@/utils/h2title';
 
 const ReturnManual = () => {
   return (
     <div>
-        <H2Title className="text-xl !mb-6" title="ხელით დაბრუნება"/>
+      <H2Title className="!mb-6 text-xl" title="ხელით დაბრუნება" />
     </div>
-  )
-}
+  );
+};
 
-export default ReturnManual
+export default ReturnManual;

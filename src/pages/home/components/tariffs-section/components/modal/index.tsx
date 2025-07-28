@@ -57,10 +57,8 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
           </div>
         </div>
         <form onSubmit={handleSubmit} className="w-full">
-          <p className="!mt-10 text-gray-600 text-sm">
-            დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით
-          </p>
-          <div className="!mt-5 grid grid-cols-1 gap-y-4 *:rounded-4xl *:border-[1px] *:border-[#665e5e49] *:!px-4 *:!py-2 text-sm">
+          <p className="!mt-10 text-sm text-gray-600">დაგვიტოვეთ ნომერი და ჩვენ დაგიკავშირდებით</p>
+          <div className="!mt-5 grid grid-cols-1 gap-y-4 text-sm *:rounded-4xl *:border-[1px] *:border-[#665e5e49] *:!px-4 *:!py-2">
             <input
               type="text"
               placeholder="Name"
@@ -78,7 +76,7 @@ const ContactModal: FC<ContactModalPropsType> = ({ isModalOpen, handleCancel }) 
           </div>
           <button
             type="submit"
-            className="!mt-6 cursor-pointer rounded-4xl bg-red-500 !px-6 !py-2 font-medium text-sm text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md"
+            className="!mt-6 cursor-pointer rounded-4xl bg-red-500 !px-6 !py-2 text-sm font-medium text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-red-600 hover:shadow-md"
           >
             Submit
           </button>

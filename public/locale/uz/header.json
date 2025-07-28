@@ -1,8 +1,7 @@
 {
-    "home-link": "asosiy",
-    "blog-link": "bloglar",
-    "contact-link": "aloqa",
-    "doc-link": "hujjatlar",
-    "header-address": "Tsereteli prospekti, №116"
-
+  "home-link": "asosiy",
+  "blog-link": "bloglar",
+  "contact-link": "aloqa",
+  "doc-link": "hujjatlar",
+  "header-address": "Tsereteli prospekti, №116"
 }

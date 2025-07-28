@@ -4,7 +4,7 @@ import { IoPhonePortraitOutline } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 
 const ContactUs = () => {
-    const {t} = useTranslation('footer')
+  const { t } = useTranslation('footer');
   return (
     <div className="flex flex-col items-start text-[var(--dark-gray)] dark:text-[var(--white-gray)]">
       <span className="!mb-4 flex items-center gap-x-3 text-2xl">

@@ -1,26 +1,25 @@
-.contact-hero{
-    background-image: url(./images/contact-hero.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 700px;
+.contact-hero {
+  background-image: url(./images/contact-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
 }
 
-.contact-decor{
-   background-image: url(./images/contact-decor.jpg);
-   background-size: cover;
-   background-position: center;
-   width: 300px;
-   height: 120px;
+.contact-decor {
+  background-image: url(./images/contact-decor.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 120px;
 }
 
-
-.contact-item{
-    background-color: #FB2C36;
-    border-radius: 50%;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    width: 55px;
-    height: 55px;
+.contact-item {
+  background-color: #fb2c36;
+  border-radius: 50%;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  width: 55px;
+  height: 55px;
 }

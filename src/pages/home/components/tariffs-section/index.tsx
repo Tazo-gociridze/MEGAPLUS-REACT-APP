@@ -27,9 +27,9 @@ const Tariffs = () => {
       </p>
       <Row gutter={[24, 24]}>
         {tariffs.map((tariff, index) => (
-          <Col xs={24} sm={12} md={8} key={index}>
+          <Col xs={24} sm={24} md={8} lg={8} key={index}>
             <Card
-              className={`!border-b-solid rounded-2xl !border-b-[5px] !bg-[#ffffff] border-gray-200 !border-b-red-500 !p-3 shadow-md dark:!border-gray-600 dark:!border-b-red-500 dark:!bg-[var(--dark-light-blue)]`}
+              className={`tariff !border-b-solid rounded-2xl !border-b-[5px] border-gray-200 !border-b-red-500 !bg-[#ffffff] !p-0 xl:!p-3 shadow-md dark:!border-gray-600 dark:!border-b-red-500 dark:!bg-[var(--dark-light-blue)]`}
             >
               <OrderBtn showModal={showModal} tariff={tariff} />
 

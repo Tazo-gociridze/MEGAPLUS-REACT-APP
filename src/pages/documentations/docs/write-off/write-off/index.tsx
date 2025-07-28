@@ -24,7 +24,7 @@ const WriteOff = () => {
           კოდი ან შტრიხკოდი და ავირჩიოთ ჩამოსაწერი პროდუქცია.
         </p>
         <Image
-        className="!my-2"
+          className="!my-2"
           src="https://megaplus.vercel.app/assets/images/docs/write-off-search.png"
           preview={false}
         />

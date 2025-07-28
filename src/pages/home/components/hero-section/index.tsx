@@ -7,13 +7,12 @@ const Hero = () => {
 
   return (
     <div className="hero-section relative !mt-28 rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
-        <TypingText/>
+      <TypingText />
       <div>
         <div
-          className={`hero-image xl:bottom-[10px] xl:right-0 xl:!h-[35rem] xl:!w-[45rem] ${showImage ? 'visible' : ''}`}
+          className={`hero-image xl:right-0 xl:bottom-[10px] xl:!h-[35rem] xl:!w-[45rem] ${showImage ? 'visible' : ''}`}
         ></div>
-        <div className="hero-demo-app-pc">
-        </div>
+        <div className="hero-demo-app-pc"></div>
       </div>
       <Decoration decorationRef={decorationRef} />
     </div>

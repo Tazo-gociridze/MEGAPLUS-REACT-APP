@@ -1,18 +1,16 @@
 .custom-menu .ant-menu-item-selected {
-  background-color: #ED1313 !important; 
+  background-color: #ed1313 !important;
   color: white !important;
 }
 
-
 .custom-menu .ant-menu-item-selected:hover {
-  background-color: #ED1313 !important;
+  background-color: #ed1313 !important;
   color: white !important;
 }
 
 .custom-menu .ant-menu-submenu-selected > .ant-menu-submenu-title {
-  color: #ff4d4f !important; 
+  color: #ff4d4f !important;
 }
-
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;

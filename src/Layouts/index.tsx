@@ -16,7 +16,6 @@ const MainLayout = () => {
     } else {
       document.body.style.overflow = '';
     }
-
   }, [pathname]);
 
   return (

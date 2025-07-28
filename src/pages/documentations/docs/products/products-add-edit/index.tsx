@@ -21,8 +21,11 @@ const ProductsAddEdit = () => {
             ღილაკს, რადგან გასუფთავდეს ველები. შევიყვანოთ ველებში ინფორმაცია:
           </span>
         </span>
-        <Image preview={false} src="https://megaplus.vercel.app/assets/images/docs/create-product-img.png" />
-        <ul className="list-disc space-y-2 !pl-4 *:!mb-3 !mt-5">
+        <Image
+          preview={false}
+          src="https://megaplus.vercel.app/assets/images/docs/create-product-img.png"
+        />
+        <ul className="!mt-5 list-disc space-y-2 !pl-4 *:!mb-3">
           <li>
             <strong>შტრიხკოდი</strong> — შევიყვანოთ (ჩავასკანეროთ) პროდუქციის შტრიხკოდი.
           </li>
@@ -39,8 +42,11 @@ const ProductsAddEdit = () => {
           </li>
           <li>
             <strong>ერთეული</strong> — შევიყვანოთ რა ერთეულში უნდა გაიყიდოს პროდუქცია, წონა თუ
-            ცალობა. ვუთითებთ „ცალი“ ან „კგ“ <br /> <span>(წონის პროდუქციაზე აუცილებლად უნდა მივუთითოთ „კგ“!!!
-            კილო, კილოგრამი არ შეიძლება, არ გადაიგზავნება სასწორზე.)</span>
+            ცალობა. ვუთითებთ „ცალი“ ან „კგ“ <br />{' '}
+            <span>
+              (წონის პროდუქციაზე აუცილებლად უნდა მივუთითოთ „კგ“!!! კილო, კილოგრამი არ შეიძლება, არ
+              გადაიგზავნება სასწორზე.)
+            </span>
           </li>
           <li>
             <strong>ფასი</strong> — ვუთითებთ რა ფასშიც უნდა გავყიდოთ პროდუქცია.
@@ -53,12 +59,21 @@ const ProductsAddEdit = () => {
           </li>
         </ul>
 
-        <span className='!mt-6'>ყველა ზოლის შევსების შემდეგ ვაწვებით შექმნა-ს</span>
+        <span className="!mt-6">ყველა ზოლის შევსების შემდეგ ვაწვებით შექმნა-ს</span>
 
         <H2Title className="!mb-6 text-xl" title="პროდუქციის ჩასწორება" />
-        <p className='!mb-6'>იმ შემთხვევაში თუ გვინდა პროდუქციაზე ინფორმაციის შეცვლა, უნდა ავირჩიოთ პროდუქცია რის შემდეგაც ავტომატურად შეივსება ველები :</p>
-        <Image preview={false} className='!mb-6' src="https://megaplus.vercel.app/assets/images/docs/create-product-img.png" />
-        <p>ჩავასწოროთ სასურველი ინფორმაცია და დავაჭიროთ ღილაკს: <strong>ჩასწორება</strong></p>
+        <p className="!mb-6">
+          იმ შემთხვევაში თუ გვინდა პროდუქციაზე ინფორმაციის შეცვლა, უნდა ავირჩიოთ პროდუქცია რის
+          შემდეგაც ავტომატურად შეივსება ველები :
+        </p>
+        <Image
+          preview={false}
+          className="!mb-6"
+          src="https://megaplus.vercel.app/assets/images/docs/create-product-img.png"
+        />
+        <p>
+          ჩავასწოროთ სასურველი ინფორმაცია და დავაჭიროთ ღილაკს: <strong>ჩასწორება</strong>
+        </p>
       </div>
     </div>
   );

@@ -12,11 +12,11 @@ const Header: React.FC<HeaderProps> = ({ setSidebar }) => {
     <>
       {location === '/docs' ? (
         <header
-          className={`fixed z-50 flex w-full flex-col justify-center py-3 transition-[0.5s] top-[-60px] dark:bg-[var(--dark-blue)]`}
+          className={`fixed top-[-60px] z-50 flex w-full flex-col justify-center py-3 transition-[0.5s] dark:bg-[var(--dark-blue)]`}
         >
           <TopHeader />
 
-          <div className="!px-10 horizontal-padding flex w-full items-center !justify-between bg-red-50 !py-3 dark:bg-[var(--dark-blue)]">
+          <div className="horizontal-padding flex w-full items-center !justify-between bg-red-50 !px-10 !py-3 dark:bg-[var(--dark-blue)]">
             <NavBar />
             <HeaderTools setSidebar={setSidebar} />
           </div>

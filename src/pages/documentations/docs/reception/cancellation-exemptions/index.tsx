@@ -19,7 +19,7 @@ const CancellationExemption = () => {
           />
           <span>გადავიდეთ დოკუმენტებში, ჩასწორება და ბოლოს დოკუმენტის ჩასწორება.</span>
         </span>
-        <div className='!mt-8'>
+        <div className="!mt-8">
           <Image
             src="https://megaplus.vercel.app/assets/images/docs/fix-doc-rs.png"
             preview={false}
