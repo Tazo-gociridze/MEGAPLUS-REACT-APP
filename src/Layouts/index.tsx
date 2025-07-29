@@ -32,7 +32,7 @@ const MainLayout = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed right-6 bottom-6 z-50 cursor-pointer rounded-md bg-red-500 !p-3 text-white shadow-lg transition-opacity duration-300 hover:bg-red-700"
+          className="fixed right-6 bottom-6 z-50 cursor-pointer rounded-md bg-red-500 !p-[10px] text-white shadow-lg transition-opacity duration-300 hover:bg-red-700"
           aria-label="Scroll to top"
         >
           <FaArrowUp />

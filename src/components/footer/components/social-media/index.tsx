@@ -7,7 +7,7 @@ const SocialMedia = () => {
   const { t } = useTranslation('footer');
   return (
     <div className="flex flex-col items-start text-[var(--dark-gray)] dark:text-[var(--white-gray)]">
-      <span className="!mb-6 flex items-center gap-x-3 text-2xl">
+      <span className="!mb-6 flex items-center gap-x-3 text-[1.2rem]">
         <span>{t('social-media')}</span> <GoPersonAdd className="text-red-500" />
       </span>
       <ul className="flex items-start gap-x-4 text-4xl">

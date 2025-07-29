@@ -14,7 +14,7 @@ const ChangeLang: FC<ChangeLangProps> = ({ items, lang, flag }) => {
       <Dropdown menu={{ items }} className="z-[9999]">
         <a
           onClick={(e) => e.preventDefault()}
-          className="flex items-center gap-x-1 text-center text-lg font-[350]"
+          className="flex items-center gap-x-1 text-center text-[18px] font-[350]"
         >
           <Space className="capitalize">{lang}</Space>
           <img src={flag} alt="" className="!mt-[2px] h-4 w-4" />

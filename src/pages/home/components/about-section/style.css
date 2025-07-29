@@ -1,0 +1,45 @@
+.sidebar-activator {
+  display: none;
+}
+
+.about-section {
+  display: grid;
+}
+
+.about-image {
+  background-image: url(./images/about/aboutUs.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.capabilities-section {
+  display: grid;
+}
+
+.about-image-2 {
+  background-image: url(./images/about/aboutUs-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+@media (max-width: 860px) {
+  .about-section {
+    display: block;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .capabilities-section {
+    display: block;
+  }
+
+  .about-image-2 {
+    display: none;
+  }
+
+}
+

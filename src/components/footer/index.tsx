@@ -9,8 +9,8 @@ const Footer = () => {
     <footer
       className={`${pathname !== '/docs' ? 'fixed-width' : 'hidden'} w-full !bg-red-50 !pt-10 text-white dark:!bg-[var(--dark-blue)]`}
     >
-      <div className="!mb-10 grid grid-cols-2 gap-x-20">
-        <div className="flex justify-start gap-x-20">
+      <div className="footer-content !mb-10 grid grid-cols-2 justify-between">
+        <div className="footer-contacts flex justify-start gap-x-10">
           <ContactUs />
           <SocialMedia />
         </div>

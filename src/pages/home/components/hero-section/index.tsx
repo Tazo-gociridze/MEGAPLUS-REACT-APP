@@ -6,7 +6,7 @@ const Hero = () => {
   const { showImage, decorationRef } = useHeroLogic();
 
   return (
-    <div className="hero-section relative !mt-28 rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
+    <div className="hero-section relative rounded-3xl border-b-10 border-red-500 bg-[#ffffff] dark:bg-[var(--dark-light-blue)]">
       <TypingText />
       <div>
         <div

@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ setSidebar }) => {
     <>
       {location === '/docs' ? (
         <header
-          className={`fixed top-[-60px] z-50 flex w-full flex-col justify-center py-3 transition-[0.5s] dark:bg-[var(--dark-blue)]`}
+          className={`fixed top-[-60px] z-50 flex w-full flex-col justify-center py-[12px] transition-[0.5s] dark:bg-[var(--dark-blue)]`}
         >
           <TopHeader />
 
